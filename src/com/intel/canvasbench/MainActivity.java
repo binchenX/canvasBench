@@ -1,0 +1,29 @@
+package com.intel.canvasbench;
+
+import android.os.Bundle;
+import android.app.Activity;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.view.Menu;
+
+public class MainActivity extends Activity {
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+		
+		BenchImageView imageView = (BenchImageView)findViewById(R.id.image);
+		Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.harborb);
+		imageView.setBitmap(bitmap);
+		imageView.invalidate();
+	}
+
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.main, menu);
+		return true;
+	}
+
+}
