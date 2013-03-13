@@ -89,13 +89,14 @@ public  abstract class TestCase extends Activity {
 			
 			Log.d(MainActivity.TAG,"TestThread start");
 			
-			for (int i = 0 ; i < 20 ; i++){
+			for (int i = 0 ; i < 10 ; i++){
 				
 				try{
-					Thread.sleep(1000);
+					Thread.sleep(160);
 				}catch(InterruptedException ex){}
 				
-				drawOneFrame(i);
+				long t = drawOneFrame(i);
+				Log.d(MainActivity.TAG, "take " + t + " ms to draw one frame" );
 			}
 			
 			//finishTestcase();

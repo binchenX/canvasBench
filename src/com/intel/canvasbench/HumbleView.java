@@ -2,6 +2,7 @@ package com.intel.canvasbench;
 
 import android.content.Context;
 import android.graphics.Canvas;
+import android.os.SystemClock;
 import android.util.AttributeSet;
 import android.view.View;
 
@@ -44,12 +45,13 @@ public abstract class HumbleView extends View {
 	protected void onDraw(Canvas canvas) {
 		// TODO Auto-generated method stub
 		super.onDraw(canvas);
-		long b = System.currentTimeMillis();
+		//long before = System.currentTimeMillis();
+		long before =  SystemClock.uptimeMillis();
 		doDraw(canvas);
-		long a = System.currentTimeMillis();
+		long after =  SystemClock.uptimeMillis();
 		
 		if(mDrawListener!=null){
-			mDrawListener.notify(b-a);
+			mDrawListener.notify(after-before);
 		}
 	}
 
