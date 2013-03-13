@@ -6,25 +6,30 @@ import android.content.Intent;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
 	
 	public static String TAG = "CanvasBench"; 
-
+	private TextView mTextView = null;
+	
+	
+	public static final int TAG_TEST_IMAGE = 0;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		startTestcaseImageView();
+		
+		mTextView = (TextView)findViewById(R.id.textInfo);
 		
 	}
 	void startTestcaseImageView(){
 		
 		Intent intent = new Intent(this,TestImageView.class);
-		startActivityForResult(intent,0);
+		startActivityForResult(intent,TAG_TEST_IMAGE);
 		
 	}
 
@@ -57,6 +62,16 @@ public class MainActivity extends Activity {
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 		// TODO Auto-generated method stub
 		super.onActivityResult(requestCode, resultCode, data);
+		
+		Log.d(TAG,"testcase finished" + resultCode);
+		switch(resultCode){
+		case TAG_TEST_IMAGE:
+			mTextView.setText("testImage: 30fps");
+			break;
+		}
+		
+		
+		
 	}
 	
 	

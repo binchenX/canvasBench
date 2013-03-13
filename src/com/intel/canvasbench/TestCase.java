@@ -72,12 +72,19 @@ public  abstract class TestCase extends Activity {
 	 */
 	abstract long drawOneFrame(int index);
 	
+	abstract void finishTest();
+	
+	abstract int getTestTag();
+	
 	
 	void finishTestcase()
 	{
+		
+		finishTest();
+		 
 		 Intent returnIntent = new Intent();
 		 returnIntent.putExtra("result",0);
-		 setResult(RESULT_OK,returnIntent);     
+		 setResult(getTestTag(),returnIntent);     
 		 finish();
 		
 	}
@@ -89,7 +96,7 @@ public  abstract class TestCase extends Activity {
 			
 			Log.d(MainActivity.TAG,"TestThread start");
 			
-			for (int i = 0 ; i < 10 ; i++){
+			for (int i = 0 ; i < 60 ; i++){
 				
 				try{
 					Thread.sleep(160);
@@ -99,7 +106,9 @@ public  abstract class TestCase extends Activity {
 				Log.d(MainActivity.TAG, "take " + t + " ms to draw one frame" );
 			}
 			
-			//finishTestcase();
+			finishTestcase();
+			
+			
 			
 		}
 		

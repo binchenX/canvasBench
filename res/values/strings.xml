@@ -3,7 +3,7 @@
 
     <string name="app_name">CanvasBench</string>
     <string name="action_settings">Settings</string>
-    <string name="hello_world">Hello world!</string>
-     <string name="test_image">testImage</string>
+    <string name="hello_world">Hi, Please select the test case!</string>
+    <string name="test_image">testImage</string>
 
 </resources>

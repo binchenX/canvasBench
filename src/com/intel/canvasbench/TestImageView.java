@@ -9,6 +9,8 @@ public class TestImageView extends TestCase implements HumbleView.DrawListener{
 	BenchImageView mImageView;
 	
 	long mTime = 0;
+
+	private Bitmap mBitmap;
 	
 	@Override
 	void setup() {
@@ -17,8 +19,8 @@ public class TestImageView extends TestCase implements HumbleView.DrawListener{
 		setContentView(R.layout.image);
 		
 		mImageView = (BenchImageView)findViewById(R.id.image);
-		Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.harborb);
-		mImageView.setBitmap(getResources(),bitmap);
+		mBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.harborb);
+		mImageView.setBitmap(getResources(),mBitmap);
 	
 		mImageView.setDrawListener(this);
 		
@@ -58,6 +60,19 @@ public class TestImageView extends TestCase implements HumbleView.DrawListener{
 			notifyAll();
 		}
 		
+	}
+
+	@Override
+	void finishTest() {
+		
+		mBitmap.recycle();
+		
+	}
+
+	@Override
+	int getTestTag() {
+		
+		return MainActivity.TAG_TEST_IMAGE;
 	}
 	
 		

@@ -67,10 +67,10 @@ public class BenchImageView extends HumbleView{
 		d.draw(canvas);
 		d.setBounds(mTop, mLeft, (int)(mTop + mOrigHeight*mScale),(int)( mLeft + mOrigWidth*mScale));
 		
-		if(index > 5){
-			mScale-=0.05f;
+		if(index > 30){
+			mScale-=0.01f;
 		}else{
-			mScale+=0.05f;	
+			mScale+=0.01f;	
 		}
 		index++;
 	}
