@@ -26,7 +26,7 @@
         
         
          <activity
-            android:name="com.intel.canvasbench.TestImageView" >
+            android:name="com.intel.canvasbench.TestDrawImage" >
             <intent-filter>
                   <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.DEFAULT" />

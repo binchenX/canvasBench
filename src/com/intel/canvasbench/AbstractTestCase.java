@@ -5,7 +5,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
-public  abstract class TestCase extends Activity implements HumbleView.DrawListener{
+
+/**
+ * 
+ * All test should inherit from TestCase
+ * 
+ * @author binchen1
+ *
+ */
+
+public  abstract class AbstractTestCase extends Activity implements AstractView.DrawListener{
 	
 	
 	
@@ -82,7 +91,7 @@ public  abstract class TestCase extends Activity implements HumbleView.DrawListe
 	
 	abstract int getTestTag();
 	
-	abstract HumbleView getTestTargetView();
+	abstract AstractView getTestTargetView();
 	
 	@Override
 	public void notify(long time) {

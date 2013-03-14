@@ -8,7 +8,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.util.AttributeSet;
 
-public class BenchDrawText extends HumbleView{
+public class MyTextView extends AstractView{
 	
 	int index = 0;
 	public final String TEXT1 = "Intel";
@@ -17,21 +17,21 @@ public class BenchDrawText extends HumbleView{
 	
 	private Paint bgPaint;
 
-	public BenchDrawText(Context context) {
+	public MyTextView(Context context) {
 		super(context);
 		init();
 	}
 	
 	
 
-	public BenchDrawText(Context context, AttributeSet attrs, int defStyle) {
+	public MyTextView(Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);
 		init();
 	}
 
 
 
-	public BenchDrawText(Context context, AttributeSet attrs) {
+	public MyTextView(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		init();
 	}

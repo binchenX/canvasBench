@@ -2,11 +2,11 @@ package com.intel.canvasbench;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.util.Log;
+//import android.util.Log;
 
-public class TestImageView extends TestCase {
+public class TestDrawImage extends AbstractTestCase {
 
-	BenchImageView mImageView;
+	MyImageView mImageView;
 	
 	//long mTime = 0;
 
@@ -18,7 +18,7 @@ public class TestImageView extends TestCase {
 		
 		setContentView(R.layout.image);
 		
-		mImageView = (BenchImageView)findViewById(R.id.image);
+		mImageView = (MyImageView)findViewById(R.id.image);
 		mBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.operah);
 		mImageView.setBitmap(getResources(),mBitmap);
 		
@@ -66,7 +66,7 @@ public class TestImageView extends TestCase {
 	}
 
 	@Override
-	HumbleView getTestTargetView() {
+	AstractView getTestTargetView() {
 		
 		return mImageView;
 	}

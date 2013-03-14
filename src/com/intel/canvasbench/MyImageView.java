@@ -8,9 +8,9 @@ import android.graphics.drawable.BitmapDrawable;
 import android.util.AttributeSet;
 import android.util.Log;
 
-public class BenchImageView extends HumbleView{
+public class MyImageView extends AstractView{
 
-	private Bitmap mBitmap = null;
+	//private Bitmap mBitmap = null;
 	private BitmapDrawable d = null;
 	private int index = 0;
 	float mScale = 0.1f;
@@ -20,13 +20,13 @@ public class BenchImageView extends HumbleView{
 	int mOrigHeight = 0;
 	
 	public void setBitmap(Bitmap bitmap){
-		mBitmap = bitmap;
+		//mBitmap = bitmap;
 		
 		
 	}
 	
 	public void setBitmap(Resources res, Bitmap bitmap){
-		mBitmap = bitmap;
+		//mBitmap = bitmap;
 		mOrigWidth = bitmap.getWidth();
 		mOrigHeight = bitmap.getHeight();
 		d = new BitmapDrawable(res,bitmap);
@@ -35,21 +35,21 @@ public class BenchImageView extends HumbleView{
 	
 
 
-	public BenchImageView(Context context, AttributeSet attrs, int defStyle) {
+	public MyImageView(Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);
 		// TODO Auto-generated constructor stub
 	}
 
 
 
-	public BenchImageView(Context context, AttributeSet attrs) {
+	public MyImageView(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		// TODO Auto-generated constructor stub
 	}
 
 
 
-	public BenchImageView(Context context) {
+	public MyImageView(Context context) {
 		super(context);
 		// TODO Auto-generated constructor stub
 	}

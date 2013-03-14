@@ -14,21 +14,21 @@ import android.view.View;
  *
  */
 
-public abstract class HumbleView extends View {
+public abstract class AstractView extends View {
 	
 	private DrawListener mDrawListener;
 
-	public HumbleView(Context context) {
+	public AstractView(Context context) {
 		super(context);
 		// TODO Auto-generated constructor stub
 	}
 
-	public HumbleView(Context context, AttributeSet attrs, int defStyle) {
+	public AstractView(Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);
 		// TODO Auto-generated constructor stub
 	}
 
-	public HumbleView(Context context, AttributeSet attrs) {
+	public AstractView(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		// TODO Auto-generated constructor stub
 	}

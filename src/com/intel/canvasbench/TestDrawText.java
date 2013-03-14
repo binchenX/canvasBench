@@ -1,15 +1,15 @@
 package com.intel.canvasbench;
 
-public class TestDrawText  extends TestCase implements HumbleView.DrawListener{
+public class TestDrawText  extends AbstractTestCase implements AstractView.DrawListener{
 
 	
-	private BenchDrawText mTextView = null;
+	private MyTextView mTextView = null;
 	
 	@Override
 	void setup() {
 		
 		setContentView(R.layout.layout_text);
-		mTextView = (BenchDrawText)findViewById(R.id.text);
+		mTextView = (MyTextView)findViewById(R.id.text);
 		
 	}
 
@@ -33,7 +33,7 @@ public class TestDrawText  extends TestCase implements HumbleView.DrawListener{
 	}
 
 	@Override
-	HumbleView getTestTargetView() {
+	AstractView getTestTargetView() {
 		
 		return mTextView;
 		

@@ -30,7 +30,7 @@ public class TestManagerActivity extends Activity {
 	}
 	void startTestcaseImageView(){
 		
-		Intent intent = new Intent(this,TestImageView.class);
+		Intent intent = new Intent(this,TestDrawImage.class);
 		startActivityForResult(intent,TAG_TEST_IMAGE);
 		
 	}
