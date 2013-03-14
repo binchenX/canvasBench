@@ -7,6 +7,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Window;
+import android.view.WindowManager;
 
 
 /**
@@ -29,9 +31,14 @@ public  abstract class AbstractTestCase extends Activity implements AstractView.
 		
 		super.onCreate(savedInstanceState);
 		
-		//Log.d(MainActivity.TAG ,"setup " + getTestName());
+		Log.d(ManagerActivity.TAG ,"setup " + ManagerActivity.getTestName(getTestTag()));
 		
-		setup();
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+	    getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, 
+	                                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+	        
+		//override on 
+		onSetup();
 		
 		getTestTargetView().setDrawListener(this);
 		
@@ -78,16 +85,16 @@ public  abstract class AbstractTestCase extends Activity implements AstractView.
 	}
 
 
-	abstract void setup();
+	abstract void onSetup();
 	
 	/**
 	 * 
 	 * @param index
 	 * @return the time (ms) it take to draw this frame
 	 */
-	abstract long drawOneFrame(int index);
+	abstract long onDrawOneFrame(int index);
 	
-	abstract void finishTest();
+	abstract void onFinishTest();
 	
 	abstract int getTestTag();
 	
@@ -108,7 +115,7 @@ public  abstract class AbstractTestCase extends Activity implements AstractView.
 	void finishTestcase(){
 		
 		 //override in subclass
-		 finishTest();
+		 onFinishTest();
 		 
 		 //return the result to Manager
 		 Intent returnIntent = new Intent();
@@ -139,7 +146,7 @@ public  abstract class AbstractTestCase extends Activity implements AstractView.
 					Thread.sleep(1000);
 				}catch(InterruptedException ex){}
 				
-				drawOneFrame(i);
+				onDrawOneFrame(i);
 				//Log.d(ManagerActivity.TAG, "take " + t + " ms to draw one frame" );
 			}
 			

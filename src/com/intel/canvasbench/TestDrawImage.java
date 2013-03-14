@@ -13,7 +13,7 @@ public class TestDrawImage extends AbstractTestCase {
 	private Bitmap mBitmap;
 	
 	@Override
-	void setup() {
+	void onSetup() {
 		
 		
 		setContentView(R.layout.image);
@@ -25,7 +25,7 @@ public class TestDrawImage extends AbstractTestCase {
 	}
 
 	@Override
-	long drawOneFrame(int index) {
+	long onDrawOneFrame(int index) {
 	
 		
 		mImageView.postInvalidate();
@@ -53,7 +53,7 @@ public class TestDrawImage extends AbstractTestCase {
 	
 
 	@Override
-	void finishTest() {
+	void onFinishTest() {
 		
 		mBitmap.recycle();
 		

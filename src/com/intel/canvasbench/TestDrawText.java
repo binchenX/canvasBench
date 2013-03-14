@@ -7,7 +7,7 @@ public class TestDrawText  extends AbstractTestCase implements AstractView.DrawL
 	
 	
 	@Override
-	void setup() {
+	void onSetup() {
 		
 		setContentView(R.layout.layout_text);
 		mTextView = (MyTextView)findViewById(R.id.text);
@@ -15,14 +15,14 @@ public class TestDrawText  extends AbstractTestCase implements AstractView.DrawL
 	}
 
 	@Override
-	long drawOneFrame(int index) {
+	long onDrawOneFrame(int index) {
 		
 		mTextView.postInvalidate();
 		return 0;
 	}
 
 	@Override
-	void finishTest() {
+	void onFinishTest() {
 		// TODO Auto-generated method stub
 		
 	}
