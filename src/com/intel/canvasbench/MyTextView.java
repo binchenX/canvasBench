@@ -47,7 +47,7 @@ public class MyTextView extends AstractView{
 	@Override
 	void doDraw(Canvas canvas) {
 		
-		 Random mRandom = new Random();
+			Random mRandom = new Random();
 	        int height = getHeight();
 	        int width  = getWidth();
 	        canvas.drawRect(0,0,width,height,bgPaint);

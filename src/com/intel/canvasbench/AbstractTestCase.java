@@ -1,5 +1,8 @@
 package com.intel.canvasbench;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,13 +19,10 @@ import android.util.Log;
 
 public  abstract class AbstractTestCase extends Activity implements AstractView.DrawListener{
 	
-	
-	
 	private TestThread mTestThread;
 	
-	//private HumbleView testTargetView;
 	
-	
+	private List<Long>testResult = new ArrayList<Long>();
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -96,7 +96,8 @@ public  abstract class AbstractTestCase extends Activity implements AstractView.
 	@Override
 	public void notify(long time) {
 		synchronized(this){
-			Log.d(ManagerActivity.TAG,"take " + time + " ms to one draw");
+			testResult.add(Long.valueOf(time));
+			Log.d(ManagerActivity.TAG,"case " + getTestTag() + "take " + time + " ms to draw oneFrame");
 			//mTime = time;
 			//notifyAll();
 		}
@@ -104,14 +105,23 @@ public  abstract class AbstractTestCase extends Activity implements AstractView.
 	}
 	
 	
-	void finishTestcase()
-	{
+	void finishTestcase(){
 		
-		finishTest();
+		 //override in subclass
+		 finishTest();
 		 
+		 //return the result to Manager
 		 Intent returnIntent = new Intent();
-		 returnIntent.putExtra("result",0);
-		 setResult(getTestTag(),returnIntent);     
+		 //returnIntent.putExtra("result",0);
+		 
+		 long[] times = new long[testResult.size()]; 
+		 int i = 0;
+		 for (Long t : testResult){
+			 times[i++] = t.longValue();
+		 }
+		 returnIntent.putExtra("times", times);
+		 setResult(0/*result_OK*/,returnIntent);     
+		
 		 finish();
 		
 	}
@@ -129,14 +139,11 @@ public  abstract class AbstractTestCase extends Activity implements AstractView.
 					Thread.sleep(1000);
 				}catch(InterruptedException ex){}
 				
-				long t = drawOneFrame(i);
-				Log.d(ManagerActivity.TAG, "take " + t + " ms to draw one frame" );
+				drawOneFrame(i);
+				//Log.d(ManagerActivity.TAG, "take " + t + " ms to draw one frame" );
 			}
 			
 			finishTestcase();
-			
-			
-			
 		}
 		
 		

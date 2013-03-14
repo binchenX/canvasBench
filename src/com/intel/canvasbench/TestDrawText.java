@@ -5,6 +5,7 @@ public class TestDrawText  extends AbstractTestCase implements AstractView.DrawL
 	
 	private MyTextView mTextView = null;
 	
+	
 	@Override
 	void setup() {
 		
