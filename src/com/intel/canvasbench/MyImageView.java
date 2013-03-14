@@ -4,6 +4,8 @@ import android.content.Context;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
 import android.graphics.drawable.BitmapDrawable;
 import android.util.AttributeSet;
 import android.util.Log;
@@ -20,6 +22,9 @@ public class MyImageView extends AstractView{
 	int mOrigHeight = 0;
 	
 	boolean mUp = true;
+	
+	private Paint bgPaint;
+
 	
 	public void setBitmap(Bitmap bitmap){
 		//mBitmap = bitmap;
@@ -57,13 +62,24 @@ public class MyImageView extends AstractView{
 	}
 
 	
-	public void init(){
+
+	@Override
+	void onInit() {
+		 bgPaint = new Paint();
+	      bgPaint.setColor(Color.BLACK);
+	      bgPaint.setStyle(Paint.Style.FILL);
 		
 	}
 
 
 	@Override
 	void doDraw(Canvas canvas) {
+		
+		//background
+		
+		 int height = getHeight();
+	       int width  = getWidth();
+	        canvas.drawRect(0,0,width,height,bgPaint);
 		
 		for (int row = 0; row < 7; row++) {
 			int hSpace = 150;
@@ -78,6 +94,7 @@ public class MyImageView extends AstractView{
 
 				d.setBounds(left, top, right, bottom);
 				d.draw(canvas);
+				d.setAlpha(200);
 			}
 		
 		}
@@ -99,6 +116,7 @@ public class MyImageView extends AstractView{
 		
 
 	}
+
 	
 
 }

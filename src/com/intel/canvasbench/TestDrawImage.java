@@ -19,7 +19,7 @@ public class TestDrawImage extends AbstractTestCase {
 		setContentView(R.layout.image);
 		
 		mImageView = (MyImageView)findViewById(R.id.image);
-		mBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.operah);
+		mBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.harborb);
 		mImageView.setBitmap(getResources(),mBitmap);
 		
 	}
