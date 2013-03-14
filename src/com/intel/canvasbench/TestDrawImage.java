@@ -62,7 +62,7 @@ public class TestDrawImage extends AbstractTestCase {
 	@Override
 	int getTestTag() {
 		
-		return TestManagerActivity.TAG_TEST_IMAGE;
+		return ManagerActivity.TAG_TEST_DRAW_IMAGE;
 	}
 
 	@Override

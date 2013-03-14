@@ -96,7 +96,7 @@ public  abstract class AbstractTestCase extends Activity implements AstractView.
 	@Override
 	public void notify(long time) {
 		synchronized(this){
-			Log.d(TestManagerActivity.TAG,"take " + time + " ms to one draw");
+			Log.d(ManagerActivity.TAG,"take " + time + " ms to one draw");
 			//mTime = time;
 			//notifyAll();
 		}
@@ -121,7 +121,7 @@ public  abstract class AbstractTestCase extends Activity implements AstractView.
 		@Override
 		public void run() {
 			
-			Log.d(TestManagerActivity.TAG,"TestThread start");
+			Log.d(ManagerActivity.TAG,"TestThread start");
 			
 			for (int i = 0 ; i < 60 ; i++){
 				
@@ -130,7 +130,7 @@ public  abstract class AbstractTestCase extends Activity implements AstractView.
 				}catch(InterruptedException ex){}
 				
 				long t = drawOneFrame(i);
-				Log.d(TestManagerActivity.TAG, "take " + t + " ms to draw one frame" );
+				Log.d(ManagerActivity.TAG, "take " + t + " ms to draw one frame" );
 			}
 			
 			finishTestcase();

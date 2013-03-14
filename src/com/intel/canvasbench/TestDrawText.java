@@ -28,7 +28,7 @@ public class TestDrawText  extends AbstractTestCase implements AstractView.DrawL
 
 	@Override
 	int getTestTag() {
-		return TestManagerActivity.TAG_TEST_TEXT;
+		return ManagerActivity.TAG_TEST_DRAW_TEXT;
 		
 	}
 

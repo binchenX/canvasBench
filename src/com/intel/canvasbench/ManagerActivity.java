@@ -9,15 +9,15 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-public class TestManagerActivity extends Activity {
+public class ManagerActivity extends Activity {
 
 	
 	public static String TAG = "CanvasBench"; 
 	private TextView mTextView = null;
 	
 	
-	public static final int TAG_TEST_IMAGE = 0;
-	public static final int TAG_TEST_TEXT = 1;
+	public static final int TAG_TEST_DRAW_IMAGE = 0;
+	public static final int TAG_TEST_DRAW_TEXT = 1;
 
 
 	@Override
@@ -29,17 +29,18 @@ public class TestManagerActivity extends Activity {
 		mTextView = (TextView)findViewById(R.id.textInfo);
 		
 	}
+	
 	void startTestcaseImageView(){
 		
 		Intent intent = new Intent(this,TestDrawImage.class);
-		startActivityForResult(intent,TAG_TEST_IMAGE);
+		startActivityForResult(intent,TAG_TEST_DRAW_IMAGE);
 		
 	}
 	
 	void startTestcaseDrawText(){
 		
 		Intent intent = new Intent(this,TestDrawText.class);
-		startActivityForResult(intent,TAG_TEST_TEXT);
+		startActivityForResult(intent,TAG_TEST_DRAW_TEXT);
 		
 	}
 
@@ -74,13 +75,15 @@ public class TestManagerActivity extends Activity {
 
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-		// TODO Auto-generated method stub
 		super.onActivityResult(requestCode, resultCode, data);
 		
 		Log.d(TAG,"testcase finished" + resultCode);
 		switch(resultCode){
-		case TAG_TEST_IMAGE:
+		case TAG_TEST_DRAW_IMAGE:
 			mTextView.setText("testImage: 30fps");
+			break;
+		case TAG_TEST_DRAW_TEXT:
+			mTextView.setText("testText: 30fps");
 			break;
 		}
 		
