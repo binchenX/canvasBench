@@ -40,4 +40,10 @@ public class TestDrawText  extends AbstractTestCase implements AstractView.DrawL
 		
 	}
 
+	@Override
+	void onStartDraw() {
+		
+		mTextView.invalidate();
+	}
+	
 }

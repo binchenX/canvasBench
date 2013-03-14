@@ -70,6 +70,12 @@ public class TestDrawImage extends AbstractTestCase {
 		
 		return mImageView;
 	}
+
+	@Override
+	void onStartDraw() {
+		
+		mImageView.invalidate();
+	}
 	
 		
 

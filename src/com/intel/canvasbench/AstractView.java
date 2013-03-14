@@ -17,6 +17,12 @@ import android.view.View;
 public abstract class AstractView extends View {
 	
 	private DrawListener mDrawListener;
+	
+	private int mMode = -1; 
+	public static final int CONTINOUSE_MODE = 0;
+	public static final int ON_REQUEST_MODE = 1;
+	
+	private boolean isTestFinish = false;
 
 	public AstractView(Context context) {
 		super(context);
@@ -39,7 +45,21 @@ public abstract class AstractView extends View {
 		mDrawListener = l;
 	}
 	
+	public void setDrawMode(int mode){
+		
+		mMode = mode;
+	}
 	
+	//this will called in main thread,so no sync needed with
+	
+	private boolean testFinish(){
+		return isTestFinish;
+	}
+	
+	//this will called in main thread, so no sync needed with 
+	public void setTestFinish(){
+		isTestFinish = true;
+	}
 	
 	@Override
 	protected void onDraw(Canvas canvas) {
@@ -52,6 +72,10 @@ public abstract class AstractView extends View {
 		
 		if(mDrawListener!=null){
 			mDrawListener.notify(after-before);
+		}
+		
+		if((mMode == CONTINOUSE_MODE) && !testFinish()){
+			invalidate();
 		}
 	}
 

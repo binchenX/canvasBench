@@ -6,6 +6,7 @@ import java.util.List;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
@@ -23,8 +24,21 @@ public  abstract class AbstractTestCase extends Activity implements AstractView.
 	
 	private TestThread mTestThread;
 	
+	//start, run 10 seconds, stop
+	private boolean mTimerMode = false;
+	
 	
 	private List<Long>testResult = new ArrayList<Long>();
+	
+	private Handler mHandler = new Handler();
+	
+	private final long testLastingTime = 10000; //20s
+	
+	private boolean isTimerMode(){
+		
+		return mTimerMode;
+		
+	}
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -42,11 +56,22 @@ public  abstract class AbstractTestCase extends Activity implements AstractView.
 		
 		getTestTargetView().setDrawListener(this);
 		
-		mTestThread = new TestThread();
+		if(!isTimerMode())
+			mTestThread = new TestThread();
 		
 	}
 	
 	
+	
+	private void stopTest(){
+		
+		//ask test case to stop
+		Log.d(ManagerActivity.TAG,"please stop test");
+		getTestTargetView().setTestFinish();
+		
+		//clean up
+		finishTestcase();
+	}
 	
 	
 	@Override
@@ -54,7 +79,26 @@ public  abstract class AbstractTestCase extends Activity implements AstractView.
 		
 		super.onResume();
 		
-		mTestThread.start();
+		getTestTargetView().setDrawMode(isTimerMode()?AstractView.CONTINOUSE_MODE:AstractView.ON_REQUEST_MODE);
+		
+		if(isTimerMode()){
+			onStartDraw();
+			
+			//setup an timer
+			mHandler.postDelayed(new Runnable(){
+
+				@Override
+				public void run() {
+					// TODO Auto-generated method stub
+					stopTest();
+					
+				}
+				
+				
+			}, testLastingTime);
+		}else{
+			mTestThread.start();
+		}
 	}
 	
 	
@@ -86,6 +130,12 @@ public  abstract class AbstractTestCase extends Activity implements AstractView.
 
 
 	abstract void onSetup();
+	
+	/**
+	 * 
+	 * trigger one single draw, called in main thread
+	 */
+	abstract void onStartDraw();
 	
 	/**
 	 * 
@@ -147,9 +197,9 @@ public  abstract class AbstractTestCase extends Activity implements AstractView.
 				}catch(InterruptedException ex){}
 				
 				onDrawOneFrame(i);
-				//Log.d(ManagerActivity.TAG, "take " + t + " ms to draw one frame" );
-			}
 			
+			}
+
 			finishTestcase();
 		}
 		

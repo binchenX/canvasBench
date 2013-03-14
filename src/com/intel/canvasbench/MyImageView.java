@@ -59,7 +59,7 @@ public class MyImageView extends AstractView{
 	@Override
 	void doDraw(Canvas canvas) {
 		
-		Log.d(ManagerActivity.TAG , "draw one frame..." + index + " is hwa? " + canvas.isHardwareAccelerated());
+		//Log.d(ManagerActivity.TAG , "draw one frame..." + index + " is hwa? " + canvas.isHardwareAccelerated());
 		
 		//for (int i = 0 ; i < 100;i++){
 		//canvas.drawBitmap(mBitmap, 10.0f + index*5, 10.0f, null);
@@ -73,9 +73,15 @@ public class MyImageView extends AstractView{
 		}else{
 			mScale+=0.01f;	
 		}
+		
 		index++;
+		
+		//run at least 
+		if(index < 6000){
+			invalidate();
+		}
+
 	}
-	
 	
 
 }
