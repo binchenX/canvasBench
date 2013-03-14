@@ -49,7 +49,7 @@ public  abstract class AbstractTestCase extends Activity implements AstractView.
 	
 	//subclass could override this to change the behavoir
 	private int getTestMode(){
-		return FIXFRAME_MODE;
+		return TIMER_MODE;
 	};
 	
 	
