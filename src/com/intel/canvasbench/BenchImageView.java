@@ -22,6 +22,7 @@ public class BenchImageView extends HumbleView{
 	public void setBitmap(Bitmap bitmap){
 		mBitmap = bitmap;
 		
+		
 	}
 	
 	public void setBitmap(Resources res, Bitmap bitmap){
@@ -58,7 +59,7 @@ public class BenchImageView extends HumbleView{
 	@Override
 	void doDraw(Canvas canvas) {
 		
-		Log.d(MainActivity.TAG , "draw one frame..." + index);
+		Log.d(TestManagerActivity.TAG , "draw one frame..." + index + " is hwa? " + canvas.isHardwareAccelerated());
 		
 		//for (int i = 0 ; i < 100;i++){
 		//canvas.drawBitmap(mBitmap, 10.0f + index*5, 10.0f, null);

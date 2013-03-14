@@ -5,11 +5,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 
-public  abstract class TestCase extends Activity {
+public  abstract class TestCase extends Activity implements HumbleView.DrawListener{
 	
 	
 	
 	private TestThread mTestThread;
+	
+	//private HumbleView testTargetView;
 	
 	
 	
@@ -18,7 +20,11 @@ public  abstract class TestCase extends Activity {
 		
 		super.onCreate(savedInstanceState);
 		
+		//Log.d(MainActivity.TAG ,"setup " + getTestName());
+		
 		setup();
+		
+		getTestTargetView().setDrawListener(this);
 		
 		mTestThread = new TestThread();
 		
@@ -76,6 +82,18 @@ public  abstract class TestCase extends Activity {
 	
 	abstract int getTestTag();
 	
+	abstract HumbleView getTestTargetView();
+	
+	@Override
+	public void notify(long time) {
+		synchronized(this){
+			Log.d(TestManagerActivity.TAG,"take " + time + " ms to one draw");
+			//mTime = time;
+			//notifyAll();
+		}
+		
+	}
+	
 	
 	void finishTestcase()
 	{
@@ -94,16 +112,16 @@ public  abstract class TestCase extends Activity {
 		@Override
 		public void run() {
 			
-			Log.d(MainActivity.TAG,"TestThread start");
+			Log.d(TestManagerActivity.TAG,"TestThread start");
 			
 			for (int i = 0 ; i < 60 ; i++){
 				
 				try{
-					Thread.sleep(160);
+					Thread.sleep(1000);
 				}catch(InterruptedException ex){}
 				
 				long t = drawOneFrame(i);
-				Log.d(MainActivity.TAG, "take " + t + " ms to draw one frame" );
+				Log.d(TestManagerActivity.TAG, "take " + t + " ms to draw one frame" );
 			}
 			
 			finishTestcase();

@@ -8,7 +8,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
-public class MainActivity extends Activity {
+public class TestManagerActivity extends Activity {
 
 	
 	public static String TAG = "CanvasBench"; 
@@ -16,6 +16,8 @@ public class MainActivity extends Activity {
 	
 	
 	public static final int TAG_TEST_IMAGE = 0;
+	public static final int TAG_TEST_TEXT = 1;
+
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

@@ -4,25 +4,23 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.util.Log;
 
-public class TestImageView extends TestCase implements HumbleView.DrawListener{
+public class TestImageView extends TestCase {
 
 	BenchImageView mImageView;
 	
-	long mTime = 0;
+	//long mTime = 0;
 
 	private Bitmap mBitmap;
 	
 	@Override
 	void setup() {
 		
-		Log.d(MainActivity.TAG ,"setup TestImageView");
+		
 		setContentView(R.layout.image);
 		
 		mImageView = (BenchImageView)findViewById(R.id.image);
-		mBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.harborb);
+		mBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.operah);
 		mImageView.setBitmap(getResources(),mBitmap);
-	
-		mImageView.setDrawListener(this);
 		
 	}
 
@@ -52,15 +50,7 @@ public class TestImageView extends TestCase implements HumbleView.DrawListener{
 	}
 	
 
-	@Override
-	public void notify(long time) {
-		synchronized(this){
-			Log.d(MainActivity.TAG,"take " + time + " ms to one draw");
-			mTime = time;
-			notifyAll();
-		}
-		
-	}
+	
 
 	@Override
 	void finishTest() {
@@ -72,7 +62,13 @@ public class TestImageView extends TestCase implements HumbleView.DrawListener{
 	@Override
 	int getTestTag() {
 		
-		return MainActivity.TAG_TEST_IMAGE;
+		return TestManagerActivity.TAG_TEST_IMAGE;
+	}
+
+	@Override
+	HumbleView getTestTargetView() {
+		
+		return mImageView;
 	}
 	
 		
