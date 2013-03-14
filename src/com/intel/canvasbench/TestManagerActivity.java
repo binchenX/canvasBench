@@ -1,5 +1,6 @@
 package com.intel.canvasbench;
 
+
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
@@ -34,6 +35,13 @@ public class TestManagerActivity extends Activity {
 		startActivityForResult(intent,TAG_TEST_IMAGE);
 		
 	}
+	
+	void startTestcaseDrawText(){
+		
+		Intent intent = new Intent(this,TestDrawText.class);
+		startActivityForResult(intent,TAG_TEST_TEXT);
+		
+	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -48,9 +56,13 @@ public class TestManagerActivity extends Activity {
 		
 		switch(item.getItemId()){
 			
-			case R.id.test_image:
+			case R.id.m_test_draw_image:
 				Log.d(TAG,"start image view test case");
 				startTestcaseImageView();
+				break;
+			case R.id.m_test_draw_text:
+				Log.d(TAG,"start image view test case");
+				startTestcaseDrawText();
 				break;
 			default:
 				break;
