@@ -113,15 +113,23 @@ public class ManagerActivity extends Activity {
 		
 		long ave = average(times);
 		
-		mTextView.setText(getTestName(requestCode) + " average fps :" + 1000/ave + " fps ");
+		long fps = 0;
+		if(ave != 0 ){
+			fps = 1000/ave;
+		}
 		
-		
+		mTextView.setText(getTestName(requestCode) + " average  :" + fps+ " fps ");
 		
 	}
 
 
 	private long average(long[] times) {
 		//Calculate fps and print out each value
+		
+		if (times.length == 0 ){
+			return 1;
+		}
+		
 		long t = 0;
 		for (int i = 0 ;i < times.length ;i++){
 			t+=times[i];

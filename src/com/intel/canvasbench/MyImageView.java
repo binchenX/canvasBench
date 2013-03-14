@@ -13,11 +13,13 @@ public class MyImageView extends AstractView{
 	//private Bitmap mBitmap = null;
 	private BitmapDrawable d = null;
 	private int index = 0;
-	float mScale = 0.1f;
-	int mTop = 10;
-	int mLeft = 10;
+	float mScale = 0.2f;
+	int mTop = 0;
+	int mLeft = 0;
 	int mOrigWidth = 0;
 	int mOrigHeight = 0;
+	
+	boolean mUp = true;
 	
 	public void setBitmap(Bitmap bitmap){
 		//mBitmap = bitmap;
@@ -54,32 +56,47 @@ public class MyImageView extends AstractView{
 		// TODO Auto-generated constructor stub
 	}
 
+	
+	public void init(){
+		
+	}
 
 
 	@Override
 	void doDraw(Canvas canvas) {
 		
-		//Log.d(ManagerActivity.TAG , "draw one frame..." + index + " is hwa? " + canvas.isHardwareAccelerated());
+		for (int row = 0; row < 7; row++) {
+			int hSpace = 150;
+			int vSpace = 200;
+
+			for (int col = 0; col < 4; col++) {
+
+				int top = mTop + row * vSpace;
+				int left = mLeft + col * hSpace;
+				int right = left + (int) (mOrigWidth * mScale);
+				int bottom = top + (int) (mOrigHeight * mScale);
+
+				d.setBounds(left, top, right, bottom);
+				d.draw(canvas);
+			}
 		
-		//for (int i = 0 ; i < 100;i++){
-		//canvas.drawBitmap(mBitmap, 10.0f + index*5, 10.0f, null);
-		//}
+		}
 		
-		d.draw(canvas);
-		d.setBounds(mTop, mLeft, (int)(mTop + mOrigHeight*mScale),(int)( mLeft + mOrigWidth*mScale));
 		
-		if(index > 30){
-			mScale-=0.01f;
+		if(mScale <= 0.2f){
+			mUp = true;
+		}
+		
+		if(mScale >= 0.8f){
+			mUp = false;
+		}
+		
+		if(mUp){
+			mScale +=0.1;
 		}else{
-			mScale+=0.01f;	
+			mScale -= 0.1;
 		}
 		
-		index++;
-		
-		//run at least 
-		if(index < 6000){
-			invalidate();
-		}
 
 	}
 	

@@ -24,21 +24,34 @@ public  abstract class AbstractTestCase extends Activity implements AstractView.
 	
 	private TestThread mTestThread;
 	
-	//start, run 10 seconds, stop
-	private boolean mTimerMode = false;
+	//1. Timer mode : start, run 20 seconds, invalidate after each draw, stop
+	//2. Fix Frame Mode : start an seperted thread, draw fixed frame every 1 seconds
+	
+	protected static final int TIMER_MODE = 0; 
+	protected static final int FIXFRAME_MODE = 1; 
+	
+	private static final long TEST_LASTING_TIME = 10000; //20s
+	
+	
+	private final static long DRAW_FRAME_NUMER = 60; 
+	private final static long SLEEP_FRAME_INTERVAL = 500; 
 	
 	
 	private List<Long>testResult = new ArrayList<Long>();
 	
 	private Handler mHandler = new Handler();
 	
-	private final long testLastingTime = 10000; //20s
+	
 	
 	private boolean isTimerMode(){
-		
-		return mTimerMode;
-		
+		return getTestMode()==TIMER_MODE;
 	}
+	
+	//subclass could override this to change the behavoir
+	private int getTestMode(){
+		return FIXFRAME_MODE;
+	};
+	
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -95,7 +108,7 @@ public  abstract class AbstractTestCase extends Activity implements AstractView.
 				}
 				
 				
-			}, testLastingTime);
+			}, TEST_LASTING_TIME);
 		}else{
 			mTestThread.start();
 		}
@@ -190,10 +203,10 @@ public  abstract class AbstractTestCase extends Activity implements AstractView.
 			
 			Log.d(ManagerActivity.TAG,"TestThread start");
 			
-			for (int i = 0 ; i < 60 ; i++){
+			for (int i = 0 ; i < DRAW_FRAME_NUMER ; i++){
 				
 				try{
-					Thread.sleep(1000);
+					Thread.sleep(SLEEP_FRAME_INTERVAL);
 				}catch(InterruptedException ex){}
 				
 				onDrawOneFrame(i);

@@ -77,6 +77,7 @@ public class TestDrawImage extends AbstractTestCase {
 		mImageView.invalidate();
 	}
 	
+
 		
 
 }
