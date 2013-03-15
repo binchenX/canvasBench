@@ -16,6 +16,8 @@ public class ManagerActivity extends Activity {
 	public static final int TAG_TEST_DRAW_IMAGE = 0;
 	public static final int TAG_TEST_DRAW_TEXT = 1;
 	public static final int TAG_END = 10;
+	
+	//private boolean[] testIndicator = 
 
 	private static String[] names = new String[TAG_END];
 
@@ -104,31 +106,13 @@ public class ManagerActivity extends Activity {
 
 		long times[] = (long[]) data.getLongArrayExtra("times");
 
-		long ave = average(times);
+		
 
-		long fps = 1000;
-		if (ave != 0) {
-			fps = 1000 / ave;
-		}
-
-		mTextView.setText(getTestName(requestCode) + " average  :" + fps
+		mTextView.setText(getTestName(requestCode) + " average  :" + Utility.fps(times)
 				+ " fps ");
 
 	}
 
-	private long average(long[] times) {
-		// Calculate fps and print out each value
-
-		if (times.length == 0) {
-			return 1;
-		}
-
-		long t = 0;
-		for (int i = 0; i < times.length; i++) {
-			t += times[i];
-		}
-		long ave = t / times.length;
-		return ave;
-	}
+	
 
 }

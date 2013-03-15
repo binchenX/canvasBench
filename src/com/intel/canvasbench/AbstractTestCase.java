@@ -8,8 +8,10 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Toast;
 
 
 /**
@@ -53,6 +55,17 @@ public  abstract class AbstractTestCase extends Activity implements AstractView.
 	};
 	
 	
+	
+	
+	
+	@Override
+	public void onBackPressed() {
+		//disable back key - we always have to finish the test case
+		
+		//TODO: make the case cancel-able
+	}
+
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		
@@ -189,6 +202,9 @@ public  abstract class AbstractTestCase extends Activity implements AstractView.
 		 for (Long t : testResult){
 			 times[i++] = t.longValue();
 		 }
+		 
+		 Toast.makeText(this, Utility.fps(times)+" fps", Toast.LENGTH_LONG).show();
+		 
 		 returnIntent.putExtra("times", times);
 		 setResult(0/*result_OK*/,returnIntent);     
 		
