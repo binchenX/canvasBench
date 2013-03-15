@@ -8,7 +8,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
-import android.view.KeyEvent;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Toast;
@@ -71,7 +70,7 @@ public  abstract class AbstractTestCase extends Activity implements AstractView.
 		
 		super.onCreate(savedInstanceState);
 		
-		Log.d(ManagerActivity.TAG ,"setup " + ManagerActivity.getTestName(getTestTag()));
+		//Log.d(ManagerActivity.TAG ,"setup " + ManagerActivity.getTestName(getTestTag()));
 		
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 	    getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, 

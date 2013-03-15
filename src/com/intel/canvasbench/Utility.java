@@ -1,7 +1,5 @@
 package com.intel.canvasbench;
 
-import android.widget.Toast;
-
 public class Utility {
 
 	
