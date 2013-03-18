@@ -81,9 +81,9 @@ public  abstract class AbstractTestCase extends Activity implements AstractView.
 		
 		getTestTargetView().setDrawListener(this);
 		
-		if(!isTimerMode())
+		if(!isTimerMode()){
 			mTestThread = new TestThread();
-		
+		}
 	}
 	
 	

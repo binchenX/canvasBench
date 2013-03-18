@@ -18,6 +18,8 @@ public class ManagerActivity extends Activity {
 	private TextView mTextView = null;
 
 	// private boolean[] testIndicator =
+	
+	private boolean mSingleMode = true;
 
 	class TestCase {
 
@@ -51,12 +53,7 @@ public class ManagerActivity extends Activity {
 
 	}
 
-	void startTestcaseDrawText() {
 
-		Intent intent = new Intent(this, TestDrawText.class);
-		startActivityForResult(intent, TAG_TEST_DRAW_TEXT);
-
-	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -77,8 +74,9 @@ public class ManagerActivity extends Activity {
 			kickOffTest();
 			break;
 		case R.id.m_test_draw_text:
+			mSingleMode = true;
 			Log.d(TAG, "start image view test case");
-			startTestcaseDrawText();
+			startTestByTag(TAG_TEST_DRAW_PATH_EFFECT);
 			break;
 		default:
 			break;
@@ -107,6 +105,7 @@ public class ManagerActivity extends Activity {
 	public static final int TAG_TEST_DRAW_IMAGE_SW = 1;
 	public static final int TAG_TEST_DRAW_TEXT = 2;
 	public static final int TAG_TEST_DRAW_TEXT_SW = 3;
+	public static final int TAG_TEST_DRAW_PATH_EFFECT = 4;
 	public static final int TAG_END = 10;
 
 	public String getTestName(int tag) {
@@ -118,6 +117,19 @@ public class ManagerActivity extends Activity {
 
 		return "unknown tc";
 
+	}
+	
+	TestCase findTestByTag(int tag){
+		
+		for (TestCase tc : testTarget) {
+			if (tag == tc.mTag) {
+				return tc;
+			}
+		}
+
+		return null;
+		
+		
 	}
 
 	private List<TestCase> testTarget = new ArrayList<TestCase>();
@@ -134,6 +146,7 @@ public class ManagerActivity extends Activity {
 		testTarget.add(new TestCase(TAG_TEST_DRAW_TEXT_SW,
 				TestDrawTextSW.class, "drawTextSW"));
 
+		testTarget.add(new TestCase(TAG_TEST_DRAW_PATH_EFFECT,TestPathEffect.class,"drawPathEffect"));
 		mTestIterator = testTarget.iterator();
 
 	}
@@ -146,11 +159,24 @@ public class ManagerActivity extends Activity {
 			startTest(clz);
 		}
 	}
+	
+	
 
 	void startTest(TestCase tc) {
 
 		Intent intent = new Intent(this, tc.mClz);
 		startActivityForResult(intent, tc.mTag);
+
+	}
+	
+	boolean startTestByTag(int tag ) {
+		TestCase tc = findTestByTag(tag);
+		if(tc != null){
+			startTest(tc);
+			return true;
+		}
+		
+		return false;
 
 	}
 
@@ -171,6 +197,12 @@ public class ManagerActivity extends Activity {
 				+ " fps ";
 
 		saveResult(msg);
+		
+		if(mSingleMode){
+			
+			displayResult();
+			return;
+		}
 
 		if (mTestIterator.hasNext()) {
 			// start next

@@ -5,6 +5,7 @@ import android.graphics.Canvas;
 import android.os.SystemClock;
 import android.util.AttributeSet;
 import android.view.View;
+import android.widget.Toast;
 
 /**
  * HumbleView keeping reporting how long it take to draw one frame.
@@ -67,6 +68,11 @@ public abstract class AstractView extends View {
 		long before = SystemClock.uptimeMillis();
 		doDraw(canvas);
 		long after = SystemClock.uptimeMillis();
+		
+		if(mDrawListener == null){
+			Toast.makeText(this.getContext(),"ERROR:missing listener", Toast.LENGTH_LONG).show();
+			return;
+		}
 
 		if (mDrawListener != null) {
 			mDrawListener.notify(after - before);
