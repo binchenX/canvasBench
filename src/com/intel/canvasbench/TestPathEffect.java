@@ -67,9 +67,11 @@ public class TestPathEffect extends AbstractTestCase {
 		private int[] mColors;
 		private float mPhase;
 
-		private static PathEffect makeDash(float phase) {
-			return new DashPathEffect(new float[] { 15, 5, 8, 5 }, phase);
-		}
+		private static final int LINE_HEIGHT = 50;
+		private static final int PATH_INTEVAL = 20;
+//		private static PathEffect makeDash(float phase) {
+//			return new DashPathEffect(new float[] { 15, 5, 8, 5 }, phase);
+//		}
 
 		private static void makeEffects(PathEffect[] e, float phase) {
 			e[0] = null; // no effect
@@ -115,8 +117,8 @@ public class TestPathEffect extends AbstractTestCase {
 		private static Path makeFollowPath() {
 			Path p = new Path();
 			p.moveTo(0, 0);
-			for (int i = 1; i <= 15; i++) {
-				p.lineTo(i * 20, (float) Math.random() * 35);
+			for (int i = 1; i <= 35; i++) {
+				p.lineTo(i * PATH_INTEVAL, (float) Math.random() * LINE_HEIGHT);
 			}
 			return p;
 		}
@@ -136,22 +138,16 @@ public class TestPathEffect extends AbstractTestCase {
 		void doDraw(Canvas canvas) {
 			canvas.drawColor(Color.WHITE);
 
-			Log.d(ManagerActivity.TAG, "start -- ");
 			RectF bounds = new RectF();
 			mPath.computeBounds(bounds, false);
 			canvas.translate(10 - bounds.left, 10 - bounds.top);
-
-//			makeEffects(mEffects, mPhase);
 			mPhase += 1;
-//			invalidate();
-
+			canvas.translate(mPhase % 100, 0);
 			for (int i = 0; i < mEffects.length; i++) {
 				mPaint.setPathEffect(mEffects[i]);
 				mPaint.setColor(mColors[i]);
 				canvas.drawPath(mPath, mPaint);
-				canvas.translate(0, 28);
-				
-				Log.d(ManagerActivity.TAG, "start - " + i);
+				canvas.translate(0, LINE_HEIGHT);
 			}
 			
 
