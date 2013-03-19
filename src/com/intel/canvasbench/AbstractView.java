@@ -14,7 +14,7 @@ import android.widget.Toast;
  * 
  */
 
-public abstract class AstractView extends View {
+public abstract class AbstractView extends View {
 
 	private DrawListener mDrawListener;
 
@@ -24,17 +24,17 @@ public abstract class AstractView extends View {
 
 	private boolean isTestFinish = false;
 
-	public AstractView(Context context) {
+	public AbstractView(Context context) {
 		super(context);
 		//onInit();
 	}
 
-	public AstractView(Context context, AttributeSet attrs, int defStyle) {
+	public AbstractView(Context context, AttributeSet attrs, int defStyle) {
 		super(context, attrs, defStyle);
 		//onInit();
 	}
 
-	public AstractView(Context context, AttributeSet attrs) {
+	public AbstractView(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		//onInit();
 	}

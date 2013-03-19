@@ -10,7 +10,7 @@ import android.graphics.drawable.BitmapDrawable;
 import android.util.AttributeSet;
 
 
-public class MyImageView extends AstractView {
+public class MyImageView extends AbstractView {
 
 	// private Bitmap mBitmap = null;
 	private BitmapDrawable d = null;

@@ -8,7 +8,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.util.AttributeSet;
 
-public class MyTextView extends AstractView {
+public class MyTextView extends AbstractView {
 
 	int index = 0;
 

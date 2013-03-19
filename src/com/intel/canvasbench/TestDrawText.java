@@ -1,7 +1,7 @@
 package com.intel.canvasbench;
 
 public class TestDrawText extends AbstractTestCase implements
-		AstractView.DrawListener {
+		AbstractView.DrawListener {
 
 	private MyTextView mTextView = null;
 
@@ -33,7 +33,7 @@ public class TestDrawText extends AbstractTestCase implements
 	}
 
 	@Override
-	AstractView getTestTargetView() {
+	AbstractView getTestTargetView() {
 
 		return mTextView;
 

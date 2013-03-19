@@ -21,7 +21,7 @@ import android.widget.Toast;
  *
  */
 
-public  abstract class AbstractTestCase extends Activity implements AstractView.DrawListener{
+public  abstract class AbstractTestCase extends Activity implements AbstractView.DrawListener{
 	
 	private TestThread mTestThread;
 	
@@ -104,7 +104,7 @@ public  abstract class AbstractTestCase extends Activity implements AstractView.
 		
 		super.onResume();
 		
-		getTestTargetView().setDrawMode(isTimerMode()?AstractView.CONTINOUSE_MODE:AstractView.ON_REQUEST_MODE);
+		getTestTargetView().setDrawMode(isTimerMode()?AbstractView.CONTINOUSE_MODE:AbstractView.ON_REQUEST_MODE);
 		
 		if(isTimerMode()){
 			onStartDraw();
@@ -173,7 +173,7 @@ public  abstract class AbstractTestCase extends Activity implements AstractView.
 	
 	abstract int getTestTag();
 	
-	abstract AstractView getTestTargetView();
+	abstract AbstractView getTestTargetView();
 	
 	@Override
 	public void notify(long time) {

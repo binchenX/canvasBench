@@ -42,7 +42,7 @@ public class TestDrawImage extends AbstractTestCase {
 	}
 
 	@Override
-	AstractView getTestTargetView() {
+	AbstractView getTestTargetView() {
 
 		return mImageView;
 	}

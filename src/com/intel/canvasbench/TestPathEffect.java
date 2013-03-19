@@ -55,12 +55,12 @@ public class TestPathEffect extends AbstractTestCase {
 	}
 
 	@Override
-	AstractView getTestTargetView() {
+	AbstractView getTestTargetView() {
 		// TODO Auto-generated method stub
 		return mTestView;
 	}
 
-	private static class SampleView extends AstractView {
+	private static class SampleView extends AbstractView {
 		private Paint mPaint;
 		private Path mPath;
 		private PathEffect[] mEffects;
