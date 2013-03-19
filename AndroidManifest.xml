@@ -70,6 +70,7 @@
         
 	  <activity
             android:name="com.intel.canvasbench.TestShader"
+             android:hardwareAccelerated="false"
 	     >
             <intent-filter>
                   <action android:name="android.intent.action.MAIN" />

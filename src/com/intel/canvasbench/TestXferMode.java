@@ -66,7 +66,7 @@ public class TestXferMode extends AbstractTestCase{
         Canvas c = new Canvas(bm);
         Paint p = new Paint(Paint.ANTI_ALIAS_FLAG);
 
-        p.setColor(0xFFFFCC44);
+        p.setColor(0xCCFFCC44);
         c.drawOval(new RectF(0, 0, w*3/4, h*3/4), p);
         return bm;
     }
@@ -77,7 +77,7 @@ public class TestXferMode extends AbstractTestCase{
         Canvas c = new Canvas(bm);
         Paint p = new Paint(Paint.ANTI_ALIAS_FLAG);
 
-        p.setColor(0xFF66AAFF);
+        p.setColor(0xCC66AAFF);
         c.drawRect(w/3, h/3, w*19/20, h*19/20, p);
         return bm;
     }
@@ -87,8 +87,8 @@ public class TestXferMode extends AbstractTestCase{
 	
 	
 	 private static class SampleView extends AbstractView {
-	        private static final int W = 64;
-	        private static final int H = 64;
+	        private static final int W = 128;
+	        private static final int H = 128;
 	        private static final int ROW_MAX = 4;   // number of samples per row
 
 	        private Bitmap mSrcB;

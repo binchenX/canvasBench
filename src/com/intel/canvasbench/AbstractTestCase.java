@@ -31,7 +31,7 @@ public  abstract class AbstractTestCase extends Activity implements AbstractView
 	protected static final int TIMER_MODE = 0; 
 	protected static final int FIXFRAME_MODE = 1; 
 	
-	private static final long TEST_LASTING_TIME = 10000; //20s
+	private static final long TEST_LASTING_TIME = 2000000; //20s
 	
 	
 	private final static long DRAW_FRAME_NUMER = 60; 

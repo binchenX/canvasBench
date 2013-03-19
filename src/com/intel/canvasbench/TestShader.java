@@ -2,15 +2,18 @@ package com.intel.canvasbench;
 
 import android.content.Context;
 import android.graphics.Bitmap;
+import android.graphics.Bitmap.Config;
 import android.graphics.BitmapFactory;
 import android.graphics.BitmapShader;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Matrix;
 import android.graphics.Paint;
+import android.graphics.Paint.Style;
 import android.graphics.PorterDuff.Mode;
 import android.graphics.PorterDuffColorFilter;
 import android.graphics.PorterDuffXfermode;
+import android.graphics.Rect;
 import android.graphics.Shader;
 import android.graphics.Shader.TileMode;
 import android.graphics.SweepGradient;
@@ -70,7 +73,12 @@ public class TestShader extends AbstractTestCase {
 		
 		private Paint redPaint, greenPaint, bluePaint, alphaPaint;
 		private Bitmap redChanImg, greenChanImg,blueChanImg,alphaImg;
+		
+		
+		private Canvas mOffScreenCanvas;
 
+		private Bitmap mOffScreenBitmap;
+		int mPicW, mPicH;
 		public SampleView(Context context) {
 			super(context);
 			setFocusable(true);
@@ -89,28 +97,36 @@ public class TestShader extends AbstractTestCase {
 			alphaImg = BitmapFactory.decodeResource(context.getResources(), R.drawable.alpha);
 			
 			redPaint = new Paint();
-			redPaint.setXfermode(new PorterDuffXfermode(Mode.LIGHTEN));
+			redPaint.setXfermode(new PorterDuffXfermode(Mode.SCREEN));
 			redPaint.setShader(new BitmapShader(redChanImg, TileMode.CLAMP,
 					TileMode.CLAMP));
 			redPaint.setColorFilter(new PorterDuffColorFilter(Color.RED,
-					Mode.DARKEN));
+					Mode.MULTIPLY));
 
 			greenPaint = new Paint();
-			greenPaint.setXfermode(new PorterDuffXfermode(Mode.LIGHTEN));
+			greenPaint.setXfermode(new PorterDuffXfermode(Mode.SCREEN));
 			greenPaint.setShader(new BitmapShader(greenChanImg, TileMode.CLAMP,
 					TileMode.CLAMP));
 			greenPaint.setColorFilter(new PorterDuffColorFilter(Color.GREEN,
-					Mode.DARKEN));
+					Mode.MULTIPLY));
 
 			bluePaint = new Paint();
-			bluePaint.setXfermode(new PorterDuffXfermode(Mode.LIGHTEN));
+			bluePaint.setXfermode(new PorterDuffXfermode(Mode.SCREEN));
 			bluePaint.setShader(new BitmapShader(blueChanImg, TileMode.CLAMP,
 					TileMode.CLAMP));
 			bluePaint.setColorFilter(new PorterDuffColorFilter(Color.BLUE,
-					Mode.DARKEN));
+					Mode.MULTIPLY));
 
 			alphaPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
 			alphaPaint.setXfermode(new PorterDuffXfermode(Mode.DST_IN));
+			
+			
+			mPicW = redChanImg.getWidth();
+			mPicH = redChanImg.getHeight();
+			//intermide result
+			mOffScreenBitmap = Bitmap.createBitmap(mPicW, mPicH, Bitmap.Config.ARGB_8888);
+			
+			mOffScreenCanvas = new Canvas(mOffScreenBitmap);
 			
 			
 			
@@ -131,6 +147,11 @@ public class TestShader extends AbstractTestCase {
 			return super.onKeyDown(keyCode, event);
 		}
 
+		
+		/**
+		 * This one is very slow.. around 100ms
+		 * 
+		 */
 		@Override
 		void doDraw(Canvas canvas) {
 
@@ -148,9 +169,14 @@ public class TestShader extends AbstractTestCase {
 					mRotate = 0;
 				}
 				canvas.drawCircle(x, y, 80, paint);
-				canvas.translate(0, 160);
+				canvas.translate(120, 0);
 			}
 
+			
+			try{
+				
+				Thread.sleep(2000);
+			}catch(Exception ex){}
 			
 			combineChanels(canvas);
 		}
@@ -159,17 +185,29 @@ public class TestShader extends AbstractTestCase {
 		void combineChanels(Canvas c){
 
 		
-			int width = 320;
-			int height = 240;
+			int width = mPicW;
+			int height = mPicH;
 			int top = 10;
 			int left = 10;
-
-			//fix me?
-			//c.setBitmap(resultImage);
-			c.drawRect(top,left , width, height, redPaint);
-			c.drawRect(top,left , width, height, greenPaint);
-			c.drawRect(top,left , width, height, bluePaint);
-		//	c.drawBitmap(alphaImg, 0, 0, alphaPaint);
+			
+			//translate 200 ,ignore previouse traslate
+			Matrix matrix = new Matrix();
+			matrix.setTranslate(0, 200);
+			c.setMatrix(matrix);
+			
+			//we need to erease it every time, 
+			mOffScreenBitmap.eraseColor(Color.BLACK);
+			//
+			mOffScreenCanvas.drawRect(top,left , width, height, redPaint);
+			mOffScreenCanvas.drawRect(top,left , width, height, greenPaint);
+			mOffScreenCanvas.drawRect(top,left , width, height, bluePaint);
+			
+			//c.drawBitmap(alphaImg, 0, 0, alphaPaint);
+			
+			
+			//save the picture
+			
+			c.drawBitmap(mOffScreenBitmap, new Rect(0,0,mPicW,mPicH), new Rect(10,10,10+mPicW,10+mPicH),null);
 
 		}
 	}
