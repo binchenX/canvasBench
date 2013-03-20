@@ -7,6 +7,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.BitmapShader;
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.LinearGradient;
 import android.graphics.Matrix;
 import android.graphics.Paint;
 import android.graphics.Paint.Style;
@@ -65,37 +66,58 @@ public class TestShader extends AbstractTestCase {
 	}
 
 	private static class SampleView extends AbstractView {
-		private Paint mPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+		private Paint mPaintWithSweepGradientShader = new Paint(
+				Paint.ANTI_ALIAS_FLAG);
+		private Shader mSweepGradientShader;
+
+		private Paint mPaintWithLinearGradientShader = new Paint(
+				Paint.ANTI_ALIAS_FLAG);
+		private Shader mLinearShader;
+
 		private float mRotate;
 		private Matrix mMatrix = new Matrix();
-		private Shader mShader;
+
 		private boolean mDoTiming;
-		
+
 		private Paint redPaint, greenPaint, bluePaint, alphaPaint;
-		private Bitmap redChanImg, greenChanImg,blueChanImg,alphaImg;
-		
-		
+		private Bitmap redChanImg, greenChanImg, blueChanImg, alphaImg;
+
 		private Canvas mOffScreenCanvas;
 
 		private Bitmap mOffScreenBitmap;
+
+		private float mCircleX = 160;
+		private float mCircleY = 100;
+
 		int mPicW, mPicH;
+
 		public SampleView(Context context) {
 			super(context);
 			setFocusable(true);
 			setFocusableInTouchMode(true);
 
-			float x = 160;
-			float y = 100;
-			mShader = new SweepGradient(x, y, new int[] { Color.GREEN,
-					Color.RED, Color.BLUE, Color.GREEN }, null);
-			mPaint.setShader(mShader);
-			
-			
-			redChanImg = BitmapFactory.decodeResource(context.getResources(), R.drawable.r);
-			greenChanImg = BitmapFactory.decodeResource(context.getResources(), R.drawable.g);
-			blueChanImg = BitmapFactory.decodeResource(context.getResources(), R.drawable.b);
-			alphaImg = BitmapFactory.decodeResource(context.getResources(), R.drawable.alpha);
-			
+			// init paint with shader
+			mSweepGradientShader = new SweepGradient(
+					mCircleX,
+					mCircleY,
+					new int[] { Color.GREEN, Color.RED, Color.BLUE, Color.GREEN },
+					null);
+			mPaintWithSweepGradientShader.setShader(mSweepGradientShader);
+
+			mLinearShader = new LinearGradient(0, 0, 100, 0, new int[] {
+					Color.GREEN, Color.RED, Color.BLUE, Color.GREEN }, null,
+					TileMode.REPEAT);
+			mPaintWithLinearGradientShader.setShader(mLinearShader);
+
+			redChanImg = BitmapFactory.decodeResource(context.getResources(),
+					R.drawable.r);
+			greenChanImg = BitmapFactory.decodeResource(context.getResources(),
+					R.drawable.g);
+			blueChanImg = BitmapFactory.decodeResource(context.getResources(),
+					R.drawable.b);
+			alphaImg = BitmapFactory.decodeResource(context.getResources(),
+					R.drawable.alpha);
+
 			redPaint = new Paint();
 			redPaint.setXfermode(new PorterDuffXfermode(Mode.SCREEN));
 			redPaint.setShader(new BitmapShader(redChanImg, TileMode.CLAMP,
@@ -119,24 +141,23 @@ public class TestShader extends AbstractTestCase {
 
 			alphaPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
 			alphaPaint.setXfermode(new PorterDuffXfermode(Mode.DST_IN));
-			
-			
+
 			mPicW = redChanImg.getWidth();
 			mPicH = redChanImg.getHeight();
-			//intermide result
-			mOffScreenBitmap = Bitmap.createBitmap(mPicW, mPicH, Bitmap.Config.ARGB_8888);
-			
+			// intermide result
+			mOffScreenBitmap = Bitmap.createBitmap(mPicW, mPicH,
+					Bitmap.Config.ARGB_8888);
+
 			mOffScreenCanvas = new Canvas(mOffScreenBitmap);
-			
-			
-			
+
 		}
 
 		@Override
 		public boolean onKeyDown(int keyCode, KeyEvent event) {
 			switch (keyCode) {
 			case KeyEvent.KEYCODE_D:
-				mPaint.setDither(!mPaint.isDither());
+				mPaintWithSweepGradientShader
+						.setDither(!mPaintWithSweepGradientShader.isDither());
 				invalidate();
 				return true;
 			case KeyEvent.KEYCODE_T:
@@ -147,7 +168,6 @@ public class TestShader extends AbstractTestCase {
 			return super.onKeyDown(keyCode, event);
 		}
 
-		
 		/**
 		 * This one is very slow.. around 100ms
 		 * 
@@ -155,59 +175,52 @@ public class TestShader extends AbstractTestCase {
 		@Override
 		void doDraw(Canvas canvas) {
 
-			Paint paint = mPaint;
-			float x = 160;
-			float y = 100;
-			
 			canvas.drawColor(Color.WHITE);
 
-			for (int i = 0; i < 3; i++) {
-				mMatrix.setRotate(mRotate, x, y);
-				mShader.setLocalMatrix(mMatrix);
-				mRotate += 3;
-				if (mRotate >= 360) {
-					mRotate = 0;
-				}
-				canvas.drawCircle(x, y, 80, paint);
-				canvas.translate(120, 0);
-			}
+			// sweep radient
 
-			
-			try{
-				
-				Thread.sleep(2000);
-			}catch(Exception ex){}
-			
+			mMatrix.setRotate(mRotate, mCircleX, mCircleY);
+			mSweepGradientShader.setLocalMatrix(mMatrix);
+			mRotate += 3;
+			if (mRotate >= 360) {
+				mRotate = 0;
+			}
+			canvas.drawCircle(mCircleX, mCircleY, 80,
+					mPaintWithSweepGradientShader);
+			canvas.translate(300, 0);
+
+			// linera
+
+			canvas.drawRect(0, 0, 200, 200, mPaintWithLinearGradientShader);
+
 			combineChanels(canvas);
 		}
-		
-		
-		void combineChanels(Canvas c){
 
-		
+		void combineChanels(Canvas c) {
+
 			int width = mPicW;
 			int height = mPicH;
 			int top = 10;
 			int left = 10;
-			
-			//translate 200 ,ignore previouse traslate
+
+			// translate 200 ,ignore previouse traslate
 			Matrix matrix = new Matrix();
 			matrix.setTranslate(0, 200);
 			c.setMatrix(matrix);
-			
-			//we need to erease it every time, 
+
+			// we need to erease it every time,
 			mOffScreenBitmap.eraseColor(Color.BLACK);
 			//
-			mOffScreenCanvas.drawRect(top,left , width, height, redPaint);
-			mOffScreenCanvas.drawRect(top,left , width, height, greenPaint);
-			mOffScreenCanvas.drawRect(top,left , width, height, bluePaint);
-			
-			//c.drawBitmap(alphaImg, 0, 0, alphaPaint);
-			
-			
-			//save the picture
-			
-			c.drawBitmap(mOffScreenBitmap, new Rect(0,0,mPicW,mPicH), new Rect(10,10,10+mPicW,10+mPicH),null);
+			mOffScreenCanvas.drawRect(top, left, width, height, redPaint);
+			mOffScreenCanvas.drawRect(top, left, width, height, greenPaint);
+			mOffScreenCanvas.drawRect(top, left, width, height, bluePaint);
+
+			// c.drawBitmap(alphaImg, 0, 0, alphaPaint);
+
+			// save the picture
+
+			c.drawBitmap(mOffScreenBitmap, new Rect(0, 0, mPicW, mPicH),
+					new Rect(10, 10, 10 + mPicW, 10 + mPicH), null);
 
 		}
 	}
