@@ -96,7 +96,7 @@ public class TestShader extends AbstractTestCase {
 			setFocusable(true);
 			setFocusableInTouchMode(true);
 
-			// init paint with shader
+			//SweepShader
 			mSweepGradientShader = new SweepGradient(
 					mCircleX,
 					mCircleY,
@@ -104,11 +104,14 @@ public class TestShader extends AbstractTestCase {
 					null);
 			mPaintWithSweepGradientShader.setShader(mSweepGradientShader);
 
+			//LinearShader
 			mLinearShader = new LinearGradient(0, 0, 100, 0, new int[] {
 					Color.GREEN, Color.RED, Color.BLUE, Color.GREEN }, null,
 					TileMode.REPEAT);
 			mPaintWithLinearGradientShader.setShader(mLinearShader);
-
+			
+			
+			//BitmapSshader with ColorFIlter, XferMode
 			redChanImg = BitmapFactory.decodeResource(context.getResources(),
 					R.drawable.r);
 			greenChanImg = BitmapFactory.decodeResource(context.getResources(),
