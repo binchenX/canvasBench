@@ -12,6 +12,30 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+
+/**
+ * 
+ * 
+ * 2 MODE support:
+ * TIMER_MODE    : draw as fast as possbile for 10 seconds
+ * FIXFRMAE_MODE : draw 60 frame with 500ms interval
+ * 
+ * TEST case support:
+ * drawImage     : draw image with scale using HWUI
+ * drawImageSW   : draw image with scale using SW
+ * drawText      : draw text using HWUI
+ * drawTextSW    : draw text using SW
+ * drawPathEffect: draw Path with effect
+ * drawShader    : draw using various shaders, combining with colorFilter and xferMode  - (SW) 
+ * drawXferMode  : draw all xfer mode
+ * 
+ * 
+ * 
+ *
+ * @author binchen1
+ *
+ */
+
 public class ManagerActivity extends Activity {
 
 	public static String TAG = "CanvasBench";
@@ -107,6 +131,11 @@ public class ManagerActivity extends Activity {
 	public static final int TAG_TEST_DRAW_TEXT = 2;
 	public static final int TAG_TEST_DRAW_TEXT_SW = 3;
 	public static final int TAG_TEST_DRAW_PATH_EFFECT = 4;
+	public static final int TAG_TEST_SHADER = 5;
+	public static final int TAG_TEST_XFERMODE = 6;
+	
+	
+	
 	public static final int TAG_END = 10;
 
 	public String getTestName(int tag) {
@@ -138,16 +167,15 @@ public class ManagerActivity extends Activity {
 
 	void initTestcase() {
 
-		testTarget.add(new TestCase(TAG_TEST_DRAW_IMAGE, TestDrawImage.class,
-				"drawImage"));
-		testTarget.add(new TestCase(TAG_TEST_DRAW_IMAGE_SW,
-				TestDrawImageSW.class, "drawImageSW"));
-		testTarget.add(new TestCase(TAG_TEST_DRAW_TEXT, TestDrawText.class,
-				"drawText"));
-		testTarget.add(new TestCase(TAG_TEST_DRAW_TEXT_SW,
-				TestDrawTextSW.class, "drawTextSW"));
-
+		testTarget.add(new TestCase(TAG_TEST_DRAW_IMAGE, TestDrawImage.class,"drawImage"));
+		testTarget.add(new TestCase(TAG_TEST_DRAW_IMAGE_SW,TestDrawImageSW.class, "drawImageSW"));
+		testTarget.add(new TestCase(TAG_TEST_DRAW_TEXT, TestDrawText.class,"drawText"));
+		testTarget.add(new TestCase(TAG_TEST_DRAW_TEXT_SW,TestDrawTextSW.class, "drawTextSW"));
 		testTarget.add(new TestCase(TAG_TEST_DRAW_PATH_EFFECT,TestPathEffect.class,"drawPathEffect"));
+		testTarget.add(new TestCase(TAG_TEST_SHADER,TestShader.class,"drawShader"));
+		testTarget.add(new TestCase(TAG_TEST_XFERMODE,TestXferMode.class,"drawXferMode"));
+		
+		
 		mTestIterator = testTarget.iterator();
 
 	}

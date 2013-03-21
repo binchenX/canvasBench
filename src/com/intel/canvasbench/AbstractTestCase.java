@@ -33,6 +33,11 @@ public  abstract class AbstractTestCase extends Activity implements AbstractView
 	protected static final int TIMER_MODE = 0; 
 	protected static final int FIXFRAME_MODE = 1; 
 	
+	private int getTestMode(){
+		return FIXFRAME_MODE;
+	};
+	
+	
 	private static final long TEST_LASTING_TIME = 5000; //20s
 	
 	
@@ -48,14 +53,11 @@ public  abstract class AbstractTestCase extends Activity implements AbstractView
 	Context mContext = null;
 	
 	
+	
+	
 	private boolean isTimerMode(){
 		return getTestMode()==TIMER_MODE;
 	}
-	
-	//subclass could overridchrom	e this to change the behavoir
-	private int getTestMode(){
-		return FIXFRAME_MODE;
-	};
 	
 	
 	
