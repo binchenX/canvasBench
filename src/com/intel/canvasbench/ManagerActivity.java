@@ -19,7 +19,7 @@ public class ManagerActivity extends Activity {
 
 	// private boolean[] testIndicator =
 	
-	private boolean mSingleMode = true;
+	private boolean mSingleMode = false;
 
 	class TestCase {
 
@@ -69,6 +69,7 @@ public class ManagerActivity extends Activity {
 		switch (item.getItemId()) {
 
 		case R.id.m_test_draw_image:
+			mSingleMode = false;
 			Log.d(TAG, "start image view test case");
 			// startTestcaseImageView();
 			kickOffTest();
