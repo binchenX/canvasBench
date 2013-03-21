@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -11,6 +12,7 @@ import android.util.Log;
 import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Toast;
+
 
 
 /**
@@ -31,7 +33,7 @@ public  abstract class AbstractTestCase extends Activity implements AbstractView
 	protected static final int TIMER_MODE = 0; 
 	protected static final int FIXFRAME_MODE = 1; 
 	
-	private static final long TEST_LASTING_TIME = 2000000; //20s
+	private static final long TEST_LASTING_TIME = 5000; //20s
 	
 	
 	private final static long DRAW_FRAME_NUMER = 60; 
@@ -42,15 +44,17 @@ public  abstract class AbstractTestCase extends Activity implements AbstractView
 	
 	private Handler mHandler = new Handler();
 	
+	private long mFps = 0;
+	Context mContext = null;
 	
 	
 	private boolean isTimerMode(){
 		return getTestMode()==TIMER_MODE;
 	}
 	
-	//subclass could override this to change the behavoir
+	//subclass could overridchrom	e this to change the behavoir
 	private int getTestMode(){
-		return TIMER_MODE;
+		return FIXFRAME_MODE;
 	};
 	
 	
@@ -84,6 +88,8 @@ public  abstract class AbstractTestCase extends Activity implements AbstractView
 		if(!isTimerMode()){
 			mTestThread = new TestThread();
 		}
+		
+		Context mContext = this;
 	}
 	
 	
@@ -202,11 +208,13 @@ public  abstract class AbstractTestCase extends Activity implements AbstractView
 			 times[i++] = t.longValue();
 		 }
 		 
-		 Toast.makeText(this, Utility.fps(times)+" fps", Toast.LENGTH_LONG).show();
+		 mFps =  Utility.fps(times);
+		 
 		 
 		 returnIntent.putExtra("times", times);
 		 setResult(0/*result_OK*/,returnIntent);     
 		
+		 
 		 finish();
 		
 	}
