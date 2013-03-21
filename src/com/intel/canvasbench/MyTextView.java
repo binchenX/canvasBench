@@ -19,8 +19,8 @@ public class MyTextView extends AbstractView {
 	public final int TIMES = 40;
 	
 
-    public final String TEXT1 = "0xbench";
-    public final String TEXT2 = "0xlab";
+    public final String TEXT1 = "canvas";
+    public final String TEXT2 = "bench";
     
 	private Paint bgPaint;
 
