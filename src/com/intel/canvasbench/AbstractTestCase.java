@@ -147,6 +147,10 @@ public  abstract class AbstractTestCase extends Activity implements AbstractView
 	protected void onPause() {
 		
 		super.onPause();
+		//stop the test case
+		if(!isTimerMode()){
+			mTestThread.exit();
+		}
 		
 	}
 
@@ -221,12 +225,24 @@ public  abstract class AbstractTestCase extends Activity implements AbstractView
 	
 	class TestThread extends Thread{
 
+		private boolean mExit = false;
+		public  synchronized void exit(){
+			mExit = true;
+			
+		}
+		
 		@Override
 		public void run() {
 			
 			Log.d(ManagerActivity.TAG,"TestThread start");
 			
 			for (int i = 0 ; i < DRAW_FRAME_NUMER ; i++){
+				synchronized(this){
+				if(mExit){
+					finishTestcase();
+					return;
+				}
+				}
 				
 				try{
 					Thread.sleep(SLEEP_FRAME_INTERVAL);
