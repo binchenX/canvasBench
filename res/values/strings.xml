@@ -7,4 +7,22 @@
     <string name="s_test_draw_image">RunAll</string>
     <string name="s_test_draw_text">Single</string>
 
+		<string name="benchDesc">
+ \n
+ \n CanvasBench description:
+ \n 
+ \n* 2 MODE support:
+ \n* TIMER_MODE    : draw as fast as possbile for 10 seconds
+ \n* FIXFRMAE_MODE : draw 60 frame with 500ms interval
+ \n* 
+ \n* TEST case support:
+ \n* drawImage     : draw image with scale using HWUI
+ \n* drawImageSW   : draw image with scale using SW
+ \n* drawText      : draw text using HWUI
+ \n* drawTextSW    : draw text using SW
+ \n* drawPathEffect: draw Path with effect
+ \n* drawShader    : draw using various shaders, combining with colorFilter and xferMode  - (SW) 
+ \n* drawXferMode  : draw all xfer mode
+ \n* 
+		</string>
 </resources>

@@ -6,14 +6,25 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".ManagerActivity" >
+    tools:context=".ManagerActivity"
+	>
 
     <TextView
 		android:id="@+id/textInfo"
 		android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+    	android:layout_height="wrap_content"
+		android:text="@string/hello_world" 
+		android:background="@color/testResultBgColor"
+		/>
     
+    <TextView
+		android:id="@+id/benchDesc"
+		android:layout_width="wrap_content"
+   		android:layout_height="wrap_content"
+		android:text="@string/benchDesc"
+		android:layout_below="@id/textInfo"
+		android:background="@color/testDesBgColor"
+	/>
    
 
 </RelativeLayout>
