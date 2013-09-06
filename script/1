@@ -1,0 +1,731 @@
+ tel.canvasbench-16333 [003] d.h2 87432.366622: sched_wakeup: comm=GC pid=16954 prio=120 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [003] d..3 87432.366641: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R ==> next_comm=GC next_pid=16954 next_prio=120\n\
+ tel.canvasbench-16333 [003] d.h2 87432.366808: sched_wakeup: comm=InputDispatcher pid=7840 prio=112 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [003] d..4 87432.367897: sched_wakeup: comm=Binder_7 pid=8070 prio=120 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [003] d..3 87432.367935: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=S ==> next_comm=Binder_7 next_pid=8070 next_prio=120\n\
+ tel.canvasbench-16333 [003] d..4 87432.370613: sched_wakeup: comm=Compiler pid=16340 prio=120 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [003] dNh3 87432.370640: hrtimer_expire_entry: hrtimer=e2b63af0 function=hrtimer_wakeup now=33617716747549\n\
+ tel.canvasbench-16333 [003] dNh5 87432.370650: sched_wakeup: comm=logcat pid=8827 prio=120 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [003] dNh3 87432.370655: hrtimer_expire_exit: hrtimer=e2b63af0\n\
+ tel.canvasbench-16333 [003] d..3 87432.370675: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R+ ==> next_comm=logcat next_pid=8827 next_prio=120\n\
+ tel.canvasbench-16333 [003] d..4 87432.371386: sched_wakeup: comm=Compiler pid=16340 prio=120 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [003] d..3 87432.371400: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R+ ==> next_comm=Compiler next_pid=16340 next_prio=120\n\
+ tel.canvasbench-16333 [003] d..4 87432.383564: sched_wakeup: comm=servicemanager pid=1786 prio=120 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [003] d..3 87432.383583: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R+ ==> next_comm=servicemanager next_pid=1786 next_prio=120\n\
+ tel.canvasbench-16333 [003] d..4 87432.383622: sched_wakeup: comm=servicemanager pid=1786 prio=120 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [003] d..3 87432.383634: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R+ ==> next_comm=servicemanager next_pid=1786 next_prio=120\n\
+ tel.canvasbench-16333 [003] d.h1 87432.383903: hrtimer_expire_entry: hrtimer=f67fef00 function=tick_sched_timer now=33617730012743\n\
+ tel.canvasbench-16333 [003] d.h1 87432.383926: softirq_raise: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] d.h1 87432.383933: softirq_raise: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [003] d.h1 87432.383947: softirq_raise: vec=7 [action=SCHED]\n\
+ tel.canvasbench-16333 [003] d.h1 87432.383955: hrtimer_expire_exit: hrtimer=f67fef00\n\
+ tel.canvasbench-16333 [003] d.h2 87432.383958: hrtimer_start: hrtimer=f67fef00 function=tick_sched_timer expires=33617740000000 softexpires=33617740000000\n\
+ tel.canvasbench-16333 [003] ..s1 87432.383971: softirq_entry: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] ..s1 87432.383977: timer_expire_entry: timer=e2b69dc0 function=process_timeout now=3331773\n\
+ tel.canvasbench-16333 [003] d.s3 87432.383993: sched_wakeup: comm=HWC Vsync Event pid=7809 prio=112 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [003] ..s1 87432.384000: timer_expire_exit: timer=e2b69dc0\n\
+ tel.canvasbench-16333 [003] ..s1 87432.384002: softirq_exit: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] ..s1 87432.384005: softirq_entry: vec=7 [action=SCHED]\n\
+ tel.canvasbench-16333 [003] ..s1 87432.384015: softirq_exit: vec=7 [action=SCHED]\n\
+ tel.canvasbench-16333 [003] ..s1 87432.384018: softirq_entry: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [003] ..s1 87432.384023: softirq_exit: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [003] d..3 87432.384038: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R ==> next_comm=HWC Vsync Event next_pid=7809 next_prio=112\n\
+ tel.canvasbench-16333 [003] d..4 87432.384179: sched_wakeup: comm=Binder_5 pid=7993 prio=120 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [003] d..3 87432.384191: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R+ ==> next_comm=Binder_5 next_pid=7993 next_prio=120\n\
+ tel.canvasbench-16333 [003] d..4 87432.384229: sched_wakeup: comm=Binder_5 pid=7993 prio=120 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [003] d..3 87432.384239: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R+ ==> next_comm=Binder_5 next_pid=7993 next_prio=120\n\
+ tel.canvasbench-16333 [003] d..4 87432.385066: sched_wakeup: comm=Binder_2 pid=7805 prio=120 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [003] d..3 87432.385090: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R+ ==> next_comm=Binder_2 next_pid=7805 next_prio=120\n\
+ tel.canvasbench-16333 [003] d..4 87432.385136: sched_wakeup: comm=Binder_2 pid=7805 prio=120 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [003] d..3 87432.385148: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R+ ==> next_comm=Binder_2 next_pid=7805 next_prio=120\n\
+ tel.canvasbench-16333 [003] d.h2 87432.385639: sched_wakeup: comm=GPUFrameComplet pid=8266 prio=120 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [003] d..3 87432.385655: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R ==> next_comm=GPUFrameComplet next_pid=8266 next_prio=120\n\
+ tel.canvasbench-16333 [003] d.h2 87432.385943: sched_wakeup: comm=GPUFrameComplet pid=8266 prio=120 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [003] d..3 87432.385958: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R ==> next_comm=GPUFrameComplet next_pid=8266 next_prio=120\n\
+ tel.canvasbench-16333 [003] d..4 87432.386309: sched_wakeup: comm=Binder_1 pid=7804 prio=120 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [003] d..3 87432.386327: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R+ ==> next_comm=Binder_1 next_pid=7804 next_prio=120\n\
+ tel.canvasbench-16333 [003] d..4 87432.386368: sched_wakeup: comm=Binder_1 pid=7804 prio=120 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [003] d..3 87432.386378: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R+ ==> next_comm=Binder_1 next_pid=7804 next_prio=120\n\
+ tel.canvasbench-16333 [003] d..3 87432.387111: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=S ==> next_comm=swapper/3 next_pid=0 next_prio=120\n\
+ tel.canvasbench-16333 [003] d..4 87432.393239: sched_wakeup: comm=Binder_C pid=9457 prio=120 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [003] d..3 87432.393265: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R+ ==> next_comm=Binder_C next_pid=9457 next_prio=120\n\
+ tel.canvasbench-16333 [003] d..4 87432.393313: sched_wakeup: comm=Binder_C pid=9457 prio=120 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [003] d..3 87432.393325: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R+ ==> next_comm=Binder_C next_pid=9457 next_prio=120\n\
+ tel.canvasbench-16333 [003] d.h1 87432.393902: hrtimer_expire_entry: hrtimer=f67fef00 function=tick_sched_timer now=33617740012032\n\
+ tel.canvasbench-16333 [003] d.h1 87432.393919: softirq_raise: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] d.h1 87432.393925: softirq_raise: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [003] d.h1 87432.393946: hrtimer_expire_exit: hrtimer=f67fef00\n\
+ tel.canvasbench-16333 [003] d.h2 87432.393950: hrtimer_start: hrtimer=f67fef00 function=tick_sched_timer expires=33617750000000 softexpires=33617750000000\n\
+ tel.canvasbench-16333 [003] ..s1 87432.393964: softirq_entry: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] ..s1 87432.393970: timer_expire_entry: timer=e2b69dc0 function=process_timeout now=3331774\n\
+ tel.canvasbench-16333 [003] d.s3 87432.393989: sched_wakeup: comm=HWC Vsync Event pid=7809 prio=112 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [003] ..s1 87432.393997: timer_expire_exit: timer=e2b69dc0\n\
+ tel.canvasbench-16333 [003] ..s1 87432.394000: softirq_exit: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] ..s1 87432.394002: softirq_entry: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [003] ..s1 87432.394010: softirq_exit: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [003] d..3 87432.394024: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R ==> next_comm=cfinteractive next_pid=586 next_prio=0\n\
+ tel.canvasbench-16333 [003] d..3 87432.395049: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=S ==> next_comm=swapper/3 next_pid=0 next_prio=120\n\
+ tel.canvasbench-16333 [003] ...1 87432.398788: tracing_mark_write: B|16333|performTraversals\n\
+ tel.canvasbench-16333 [003] ...1 87432.399575: tracing_mark_write: B|16333|measure\n\
+ tel.canvasbench-16333 [003] ...1 87432.399807: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [003] d..4 87432.400164: sched_wakeup: comm=Binder_A pid=8080 prio=120 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [003] d..3 87432.400190: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R+ ==> next_comm=Binder_A next_pid=8080 next_prio=120\n\
+ tel.canvasbench-16333 [003] d..4 87432.400239: sched_wakeup: comm=Binder_A pid=8080 prio=120 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [003] d..3 87432.400250: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R+ ==> next_comm=Binder_A next_pid=8080 next_prio=120\n\
+ tel.canvasbench-16333 [003] d..3 87432.401056: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=S ==> next_comm=swapper/3 next_pid=0 next_prio=120\n\
+ tel.canvasbench-16333 [003] d..4 87432.425807: sched_wakeup: comm=Binder_E pid=16812 prio=120 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [003] d..3 87432.425838: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=S ==> next_comm=Binder_E next_pid=16812 next_prio=120\n\
+ tel.canvasbench-16333 [003] d..3 87432.426157: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=S ==> next_comm=swapper/3 next_pid=0 next_prio=120\n\
+ tel.canvasbench-16333 [003] d..4 87432.426458: sched_wakeup: comm=Binder_8 pid=8073 prio=120 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [003] d..3 87432.426471: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R+ ==> next_comm=Binder_8 next_pid=8073 next_prio=120\n\
+ tel.canvasbench-16333 [003] d..4 87432.426508: sched_wakeup: comm=Binder_8 pid=8073 prio=120 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [003] d..3 87432.426517: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R+ ==> next_comm=Binder_8 next_pid=8073 next_prio=120\n\
+ tel.canvasbench-16333 [003] ...1 87432.426910: tracing_mark_write: B|16333|connect\n\
+ tel.canvasbench-16333 [003] d..4 87432.426957: sched_wakeup: comm=Binder_4 pid=7990 prio=120 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [003] d..3 87432.426970: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R+ ==> next_comm=Binder_4 next_pid=7990 next_prio=120\n\
+ tel.canvasbench-16333 [003] d..4 87432.427005: sched_wakeup: comm=Binder_6 pid=7996 prio=120 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [003] d..3 87432.427014: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R+ ==> next_comm=Binder_6 next_pid=7996 next_prio=120\n\
+ tel.canvasbench-16333 [003] d..4 87432.427067: sched_wakeup: comm=Binder_4 pid=7990 prio=120 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [003] d..3 87432.427077: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R+ ==> next_comm=Binder_4 next_pid=7990 next_prio=120\n\
+ tel.canvasbench-16333 [003] ...1 87432.427325: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [003] ...1 87432.427373: tracing_mark_write: B|16333|setSwapInterval\n\
+ tel.canvasbench-16333 [003] d..3 87432.427469: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=S ==> next_comm=swapper/3 next_pid=0 next_prio=120\n\
+ tel.canvasbench-16333 [003] ...1 87432.427720: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [003] ...1 87432.427764: tracing_mark_write: B|16333|query\n\
+ tel.canvasbench-16333 [003] ...1 87432.427774: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [003] ...1 87432.427804: tracing_mark_write: B|16333|query\n\
+ tel.canvasbench-16333 [003] ...1 87432.427813: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [003] ...1 87432.427826: tracing_mark_write: B|16333|query\n\
+ tel.canvasbench-16333 [003] d..4 87432.427871: sched_wakeup: comm=Binder_7 pid=8070 prio=120 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [003] d..3 87432.427883: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R+ ==> next_comm=Binder_7 next_pid=8070 next_prio=120\n\
+ tel.canvasbench-16333 [003] d..4 87432.427919: sched_wakeup: comm=Binder_7 pid=8070 prio=120 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [003] d..3 87432.427927: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R+ ==> next_comm=Binder_7 next_pid=8070 next_prio=120\n\
+ tel.canvasbench-16333 [003] ...1 87432.428122: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [003] ...1 87432.428142: tracing_mark_write: B|16333|query\n\
+ tel.canvasbench-16333 [003] d..4 87432.428191: sched_wakeup: comm=Binder_5 pid=7993 prio=120 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [003] d..3 87432.428203: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R+ ==> next_comm=Binder_5 next_pid=7993 next_prio=120\n\
+ tel.canvasbench-16333 [003] d..4 87432.428239: sched_wakeup: comm=Binder_5 pid=7993 prio=120 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [003] d..3 87432.428247: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R+ ==> next_comm=Binder_5 next_pid=7993 next_prio=120\n\
+ tel.canvasbench-16333 [003] ...1 87432.428425: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [003] d.h2 87432.429329: hrtimer_expire_entry: hrtimer=e2b63af0 function=hrtimer_wakeup now=33617775439865\n\
+ tel.canvasbench-16333 [003] d.h4 87432.429347: sched_wakeup: comm=logcat pid=8827 prio=120 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [003] dNh2 87432.429353: hrtimer_expire_exit: hrtimer=e2b63af0\n\
+ tel.canvasbench-16333 [003] d..3 87432.429375: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=D ==> next_comm=logcat next_pid=8827 next_prio=120\n\
+ tel.canvasbench-16333 [003] d.h1 87432.433899: hrtimer_expire_entry: hrtimer=f67fef00 function=tick_sched_timer now=33617780009717\n\
+ tel.canvasbench-16333 [003] d.h1 87432.433927: softirq_raise: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] d.h1 87432.433952: hrtimer_expire_exit: hrtimer=f67fef00\n\
+ tel.canvasbench-16333 [003] d.h2 87432.433955: hrtimer_start: hrtimer=f67fef00 function=tick_sched_timer expires=33617790000000 softexpires=33617790000000\n\
+ tel.canvasbench-16333 [003] ..s1 87432.433967: softirq_entry: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] ..s1 87432.433973: timer_expire_entry: timer=f6800920 function=cpufreq_interactive_timer now=3331778\n\
+ tel.canvasbench-16333 [003] d.s2 87432.433987: timer_start: timer=f6800920 function=cpufreq_interactive_timer expires=3331788 [timeout=10]\n\
+ tel.canvasbench-16333 [003] ..s1 87432.433992: timer_expire_exit: timer=f6800920\n\
+ tel.canvasbench-16333 [003] ..s1 87432.433995: softirq_exit: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] ...1 87432.434621: tracing_mark_write: B|16333|query\n\
+ tel.canvasbench-16333 [003] ...1 87432.434639: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [003] ...1 87432.434679: tracing_mark_write: B|16333|query\n\
+ tel.canvasbench-16333 [003] d..4 87432.434778: sched_wakeup: comm=Binder_2 pid=7805 prio=120 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [003] d..3 87432.434799: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R+ ==> next_comm=Binder_2 next_pid=7805 next_prio=120\n\
+ tel.canvasbench-16333 [003] d..4 87432.434847: sched_wakeup: comm=Binder_2 pid=7805 prio=120 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [003] d..3 87432.434859: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R+ ==> next_comm=Binder_2 next_pid=7805 next_prio=120\n\
+ tel.canvasbench-16333 [003] ...1 87432.435106: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [003] ...1 87432.435127: tracing_mark_write: B|16333|query\n\
+ tel.canvasbench-16333 [003] d..4 87432.435186: sched_wakeup: comm=Binder_B pid=8137 prio=120 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [003] d..3 87432.435202: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R+ ==> next_comm=Binder_B next_pid=8137 next_prio=120\n\
+ tel.canvasbench-16333 [003] d..4 87432.435243: sched_wakeup: comm=Binder_B pid=8137 prio=120 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [003] d..3 87432.435253: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R+ ==> next_comm=Binder_B next_pid=8137 next_prio=120\n\
+ tel.canvasbench-16333 [003] ...1 87432.435472: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [003] ...1 87432.435527: tracing_mark_write: B|16333|query\n\
+ tel.canvasbench-16333 [003] ...1 87432.435539: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [003] ...1 87432.435558: tracing_mark_write: B|16333|query\n\
+ tel.canvasbench-16333 [003] ...1 87432.435568: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [003] ...1 87432.435582: tracing_mark_write: B|16333|query\n\
+ tel.canvasbench-16333 [003] ...1 87432.435591: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [003] ...1 87432.435610: tracing_mark_write: B|16333|setBuffersDimensions\n\
+ tel.canvasbench-16333 [003] ...1 87432.435620: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [003] ...1 87432.435638: tracing_mark_write: B|16333|dequeueBuffer\n\
+ tel.canvasbench-16333 [003] d..4 87432.435698: sched_wakeup: comm=Binder_1 pid=7804 prio=120 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [003] d..3 87432.435716: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R+ ==> next_comm=Binder_1 next_pid=7804 next_prio=120\n\
+ tel.canvasbench-16333 [003] d..4 87432.435759: sched_wakeup: comm=Binder_1 pid=7804 prio=120 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [003] d..3 87432.435770: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R+ ==> next_comm=Binder_1 next_pid=7804 next_prio=120\n\
+ tel.canvasbench-16333 [003] d..3 87432.449198: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=S ==> next_comm=swapper/3 next_pid=0 next_prio=120\n\
+ tel.canvasbench-16333 [003] ...1 87432.449535: tracing_mark_write: B|16333|registerBuffer\n\
+ tel.canvasbench-16333 [003] d.h2 87432.450592: sched_wakeup: comm=Binder_E pid=16812 prio=120 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [003] ...1 87432.451291: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [003] ...1 87432.451336: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [003] ...1 87432.451369: tracing_mark_write: B|16333|waitForever\n\
+ tel.canvasbench-16333 [003] ...1 87432.451379: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [003] ...1 87432.451740: tracing_mark_write: B|16333|layout\n\
+ tel.canvasbench-16333 [003] ...1 87432.452058: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [003] d..4 87432.452288: sched_wakeup: comm=Binder_8 pid=8073 prio=120 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [003] d..3 87432.452314: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R+ ==> next_comm=Binder_8 next_pid=8073 next_prio=120\n\
+ tel.canvasbench-16333 [003] d..4 87432.452360: sched_wakeup: comm=Binder_8 pid=8073 prio=120 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [003] d..3 87432.452372: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R+ ==> next_comm=Binder_8 next_pid=8073 next_prio=120\n\
+ tel.canvasbench-16333 [003] ...1 87432.452582: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [003] d.h1 87432.453903: hrtimer_expire_entry: hrtimer=f67fef00 function=tick_sched_timer now=33617800016057\n\
+ tel.canvasbench-16333 [003] d.h1 87432.453918: softirq_raise: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] d.h1 87432.453925: softirq_raise: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [003] d.h1 87432.453938: softirq_raise: vec=7 [action=SCHED]\n\
+ tel.canvasbench-16333 [003] d.h1 87432.453947: hrtimer_expire_exit: hrtimer=f67fef00\n\
+ tel.canvasbench-16333 [003] d.h2 87432.453951: hrtimer_start: hrtimer=f67fef00 function=tick_sched_timer expires=33617810000000 softexpires=33617810000000\n\
+ tel.canvasbench-16333 [003] ..s1 87432.453965: softirq_entry: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] ..s1 87432.453970: softirq_exit: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] ..s1 87432.453973: softirq_entry: vec=7 [action=SCHED]\n\
+ tel.canvasbench-16333 [003] ..s1 87432.453996: softirq_exit: vec=7 [action=SCHED]\n\
+ tel.canvasbench-16333 [003] ..s1 87432.453999: softirq_entry: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [003] ..s1 87432.454005: softirq_exit: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [003] d..4 87432.456187: sched_wakeup: comm=Binder_4 pid=7990 prio=120 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [003] d..3 87432.456216: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R+ ==> next_comm=Binder_4 next_pid=7990 next_prio=120\n\
+ tel.canvasbench-16333 [003] d..4 87432.456265: sched_wakeup: comm=Binder_4 pid=7990 prio=120 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [003] d..3 87432.456277: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R+ ==> next_comm=Binder_4 next_pid=7990 next_prio=120\n\
+ tel.canvasbench-16333 [003] d..3 87432.456678: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=S ==> next_comm=swapper/3 next_pid=0 next_prio=120\n\
+ tel.canvasbench-16333 [002] d..4 87432.461326: sched_wakeup: comm=Binder_1 pid=16344 prio=120 success=1 target_cpu=002\n\
+ tel.canvasbench-16333 [002] d..3 87432.461339: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R+ ==> next_comm=Binder_1 next_pid=16344 next_prio=120\n\
+ tel.canvasbench-16333 [002] d.h2 87432.461662: sched_wakeup: comm=Binder_1 pid=16344 prio=120 success=1 target_cpu=002\n\
+ tel.canvasbench-16333 [002] d..3 87432.461680: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R ==> next_comm=Binder_1 next_pid=16344 next_prio=120\n\
+ tel.canvasbench-16333 [002] d..3 87432.462832: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=S ==> next_comm=Binder_2 next_pid=7992 next_prio=120\n\
+ tel.canvasbench-16333 [003] ...1 87432.471652: tracing_mark_write: B|16333|performTraversals\n\
+ tel.canvasbench-16333 [003] ...1 87432.471741: tracing_mark_write: B|16333|measure\n\
+ tel.canvasbench-16333 [003] ...1 87432.471946: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [003] ...1 87432.471980: tracing_mark_write: B|16333|layout\n\
+ tel.canvasbench-16333 [003] ...1 87432.472067: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [003] ...1 87432.472103: tracing_mark_write: B|16333|draw\n\
+ tel.canvasbench-16333 [003] ...1 87432.472254: tracing_mark_write: B|16333|eglBeginFrame\n\
+ tel.canvasbench-16333 [003] ...1 87432.472273: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [003] ...1 87432.472306: tracing_mark_write: B|16333|getDisplayList\n\
+ tel.canvasbench-16333 [003] d.h1 87432.473904: hrtimer_expire_entry: hrtimer=f67fef00 function=tick_sched_timer now=33617820012341\n\
+ tel.canvasbench-16333 [003] d.h1 87432.473931: softirq_raise: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] d.h1 87432.473953: softirq_raise: vec=7 [action=SCHED]\n\
+ tel.canvasbench-16333 [003] d.h1 87432.473960: hrtimer_expire_exit: hrtimer=f67fef00\n\
+ tel.canvasbench-16333 [003] d.h2 87432.473962: hrtimer_start: hrtimer=f67fef00 function=tick_sched_timer expires=33617830000000 softexpires=33617830000000\n\
+ tel.canvasbench-16333 [003] ..s1 87432.473974: softirq_entry: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] ..s1 87432.473979: softirq_exit: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] ..s1 87432.473981: softirq_entry: vec=7 [action=SCHED]\n\
+ tel.canvasbench-16333 [003] ..s1 87432.473994: softirq_exit: vec=7 [action=SCHED]\n\
+ tel.canvasbench-16333 [003] d.h1 87432.483901: hrtimer_expire_entry: hrtimer=f67fef00 function=tick_sched_timer now=33617830011370\n\
+ tel.canvasbench-16333 [003] d.h1 87432.483924: softirq_raise: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] d.h1 87432.483932: softirq_raise: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [003] d.h1 87432.483955: hrtimer_expire_exit: hrtimer=f67fef00\n\
+ tel.canvasbench-16333 [003] d.h2 87432.483959: hrtimer_start: hrtimer=f67fef00 function=tick_sched_timer expires=33617840000000 softexpires=33617840000000\n\
+ tel.canvasbench-16333 [003] ..s1 87432.483973: softirq_entry: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] ..s1 87432.483978: softirq_exit: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] ..s1 87432.483981: softirq_entry: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [003] ..s1 87432.484001: softirq_exit: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [003] d.h1 87432.493904: hrtimer_expire_entry: hrtimer=f67fef00 function=tick_sched_timer now=33617840014515\n\
+ tel.canvasbench-16333 [003] d.h1 87432.493928: softirq_raise: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] d.h1 87432.493934: softirq_raise: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [003] d.h1 87432.493965: hrtimer_expire_exit: hrtimer=f67fef00\n\
+ tel.canvasbench-16333 [003] d.h2 87432.493968: hrtimer_start: hrtimer=f67fef00 function=tick_sched_timer expires=33617850000000 softexpires=33617850000000\n\
+ tel.canvasbench-16333 [003] ..s1 87432.493979: softirq_entry: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] ..s1 87432.493984: softirq_exit: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] ..s1 87432.493986: softirq_entry: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [003] ..s1 87432.493992: softirq_exit: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [003] d.h1 87432.503907: hrtimer_expire_entry: hrtimer=f67fef00 function=tick_sched_timer now=33617850019933\n\
+ tel.canvasbench-16333 [003] d.h1 87432.503935: softirq_raise: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] d.h1 87432.503973: hrtimer_expire_exit: hrtimer=f67fef00\n\
+ tel.canvasbench-16333 [003] d.h2 87432.503975: hrtimer_start: hrtimer=f67fef00 function=tick_sched_timer expires=33617860000000 softexpires=33617860000000\n\
+ tel.canvasbench-16333 [003] ..s1 87432.503990: softirq_entry: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] ..s1 87432.503996: softirq_exit: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] d.h1 87432.513900: hrtimer_expire_entry: hrtimer=f67fef00 function=tick_sched_timer now=33617860012431\n\
+ tel.canvasbench-16333 [003] d.h1 87432.513929: softirq_raise: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] d.h1 87432.513958: hrtimer_expire_exit: hrtimer=f67fef00\n\
+ tel.canvasbench-16333 [003] d.h2 87432.513961: hrtimer_start: hrtimer=f67fef00 function=tick_sched_timer expires=33617870000000 softexpires=33617870000000\n\
+ tel.canvasbench-16333 [003] ..s1 87432.513973: softirq_entry: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] ..s1 87432.513976: softirq_exit: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] d.h1 87432.523912: hrtimer_expire_entry: hrtimer=f67fef00 function=tick_sched_timer now=33617870021184\n\
+ tel.canvasbench-16333 [003] d.h1 87432.523934: softirq_raise: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] d.h1 87432.523955: softirq_raise: vec=7 [action=SCHED]\n\
+ tel.canvasbench-16333 [003] d.h1 87432.523965: hrtimer_expire_exit: hrtimer=f67fef00\n\
+ tel.canvasbench-16333 [003] d.h2 87432.523968: hrtimer_start: hrtimer=f67fef00 function=tick_sched_timer expires=33617880000000 softexpires=33617880000000\n\
+ tel.canvasbench-16333 [003] ..s1 87432.523978: softirq_entry: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] ..s1 87432.523982: softirq_exit: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] ..s1 87432.523984: softirq_entry: vec=7 [action=SCHED]\n\
+ tel.canvasbench-16333 [003] ..s1 87432.524010: softirq_exit: vec=7 [action=SCHED]\n\
+ tel.canvasbench-16333 [003] d..3 87432.524029: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R ==> next_comm=cfinteractive next_pid=586 next_prio=0\n\
+ tel.canvasbench-16333 [003] d.h1 87432.533896: hrtimer_expire_entry: hrtimer=f67fef00 function=tick_sched_timer now=33617880010247\n\
+ tel.canvasbench-16333 [003] d.h1 87432.533916: softirq_raise: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] d.h1 87432.533942: hrtimer_expire_exit: hrtimer=f67fef00\n\
+ tel.canvasbench-16333 [003] d.h2 87432.533946: hrtimer_start: hrtimer=f67fef00 function=tick_sched_timer expires=33617890000000 softexpires=33617890000000\n\
+ tel.canvasbench-16333 [003] d.H2 87432.533977: sched_wakeup: comm=cfinteractive pid=586 prio=0 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [003] ..s1 87432.533984: softirq_entry: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] ..s1 87432.533988: timer_expire_entry: timer=f6800920 function=cpufreq_interactive_timer now=3331788\n\
+ tel.canvasbench-16333 [003] ..s1 87432.534001: timer_expire_exit: timer=f6800920\n\
+ tel.canvasbench-16333 [003] ..s1 87432.534004: softirq_exit: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] d..3 87432.534020: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R ==> next_comm=cfinteractive next_pid=586 next_prio=0\n\
+ tel.canvasbench-16333 [003] d..4 87432.535127: sched_wakeup: comm=logcat pid=8827 prio=120 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [003] dN.4 87432.535177: sched_wakeup: comm=logcat pid=7724 prio=120 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [003] ...1 87432.535816: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [003] ...1 87432.535860: tracing_mark_write: B|16333|prepareFrame\n\
+ tel.canvasbench-16333 [003] ...1 87432.535918: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [003] ...1 87432.535954: tracing_mark_write: B|16333|drawDisplayList\n\
+ tel.canvasbench-16333 [003] d.h1 87432.543897: hrtimer_expire_entry: hrtimer=f67fef00 function=tick_sched_timer now=33617890010001\n\
+ tel.canvasbench-16333 [003] d.h1 87432.543917: softirq_raise: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] d.h1 87432.543942: hrtimer_expire_exit: hrtimer=f67fef00\n\
+ tel.canvasbench-16333 [003] d.h2 87432.543943: hrtimer_start: hrtimer=f67fef00 function=tick_sched_timer expires=33617900000000 softexpires=33617900000000\n\
+ tel.canvasbench-16333 [003] ..s1 87432.543948: softirq_entry: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] ..s1 87432.543951: softirq_exit: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] d..2 87432.544205: timer_start: timer=f87c644c function=ut_isnprintf expires=3331794 [timeout=5]\n\
+ tel.canvasbench-16333 [003] d..2 87432.544225: hrtimer_start: hrtimer=f87c5dc0 function=gburst_module_init expires=33617895345874 softexpires=33617895345874\n\
+ tel.canvasbench-16333 [003] ...1 87432.544349: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [003] ...1 87432.544411: tracing_mark_write: B|16333|eglSwapBuffers\n\
+ tel.canvasbench-16333 [003] ...1 87432.544491: tracing_mark_write: B|16333|setBuffersTransform\n\
+ tel.canvasbench-16333 [003] ...1 87432.544496: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [003] ...1 87432.544503: tracing_mark_write: B|16333|queueBuffer\n\
+ tel.canvasbench-16333 [003] d..4 87432.544554: sched_wakeup: comm=Binder_2 pid=7805 prio=120 success=1 target_cpu=002\n\
+ tel.canvasbench-16333 [003] d..3 87432.544597: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=S ==> next_comm=swapper/3 next_pid=0 next_prio=120\n\
+ tel.canvasbench-16333 [003] ...1 87432.544770: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [003] ...1 87432.544786: tracing_mark_write: B|16333|query\n\
+ tel.canvasbench-16333 [003] ...1 87432.544793: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [003] ...1 87432.544799: tracing_mark_write: B|16333|query\n\
+ tel.canvasbench-16333 [003] ...1 87432.544803: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [003] ...1 87432.544808: tracing_mark_write: B|16333|query\n\
+ tel.canvasbench-16333 [003] ...1 87432.544812: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [003] ...1 87432.544818: tracing_mark_write: B|16333|setBuffersDimensions\n\
+ tel.canvasbench-16333 [003] ...1 87432.544822: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [003] ...1 87432.544828: tracing_mark_write: B|16333|dequeueBuffer\n\
+ tel.canvasbench-16333 [003] d..4 87432.544851: sched_wakeup: comm=Binder_B pid=8137 prio=120 success=1 target_cpu=002\n\
+ tel.canvasbench-16333 [003] d..3 87432.544876: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=S ==> next_comm=swapper/3 next_pid=0 next_prio=120\n\
+ tel.canvasbench-16333 [002] d..4 87432.550532: sched_wakeup: comm=Binder_C pid=9457 prio=120 success=1 target_cpu=002\n\
+ tel.canvasbench-16333 [002] d..3 87432.550541: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R+ ==> next_comm=Binder_C next_pid=9457 next_prio=120\n\
+ tel.canvasbench-16333 [002] d..4 87432.550564: sched_wakeup: comm=Binder_C pid=9457 prio=120 success=1 target_cpu=002\n\
+ tel.canvasbench-16333 [002] d..3 87432.550570: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R+ ==> next_comm=Binder_C next_pid=9457 next_prio=120\n\
+ tel.canvasbench-16333 [002] ...1 87432.550749: tracing_mark_write: B|16333|registerBuffer\n\
+ tel.canvasbench-16333 [002] ...1 87432.551891: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [002] ...1 87432.551928: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [002] ...1 87432.551948: tracing_mark_write: B|16333|waitForever\n\
+ tel.canvasbench-16333 [002] ...1 87432.551953: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [002] ...1 87432.552208: tracing_mark_write: B|16333|kicked off frame 366\n\
+ tel.canvasbench-16333 [002] d..4 87432.552254: sched_wakeup: comm=GPUFrameComplet pid=16347 prio=120 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [002] ...1 87432.552272: tracing_mark_write: C|16333|GPU Frames Outstanding|1\n\
+ tel.canvasbench-16333 [002] ...1 87432.552278: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [002] ...1 87432.552286: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [002] ...1 87432.552355: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [002] d..3 87432.552586: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=S ==> next_comm=swapper/2 next_pid=0 next_prio=120\n\
+ tel.canvasbench-16333 [003] ...1 87432.555884: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [003] d.h2 87432.556673: sched_wakeup: comm=GPUFrameComplet pid=16347 prio=120 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [003] d..3 87432.556701: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R ==> next_comm=GPUFrameComplet next_pid=16347 next_prio=120\n\
+ tel.canvasbench-16333 [003] d..4 87432.559415: sched_wakeup: comm=Binder_1 pid=7804 prio=120 success=1 target_cpu=002\n\
+ tel.canvasbench-16333 [003] d..3 87432.559510: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=S ==> next_comm=swapper/3 next_pid=0 next_prio=120\n\
+ tel.canvasbench-16333 [002] d.h1 87432.883883: hrtimer_expire_entry: hrtimer=f67f1f00 function=tick_sched_timer now=33618230011876\n\
+ tel.canvasbench-16333 [002] d.h1 87432.883909: softirq_raise: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [002] d.h1 87432.883915: softirq_raise: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [002] d.h1 87432.883931: softirq_raise: vec=7 [action=SCHED]\n\
+ tel.canvasbench-16333 [002] d.h1 87432.883939: hrtimer_expire_exit: hrtimer=f67f1f00\n\
+ tel.canvasbench-16333 [002] d.h2 87432.883943: hrtimer_start: hrtimer=f67f1f00 function=tick_sched_timer expires=33618240000000 softexpires=33618240000000\n\
+ tel.canvasbench-16333 [002] ..s1 87432.883953: softirq_entry: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [002] ..s1 87432.883960: timer_expire_entry: timer=f67f3920 function=cpufreq_interactive_timer now=3331823\n\
+ tel.canvasbench-16333 [002] ..s1 87432.883973: timer_expire_exit: timer=f67f3920\n\
+ tel.canvasbench-16333 [002] ..s1 87432.883978: softirq_exit: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [002] ..s1 87432.883981: softirq_entry: vec=7 [action=SCHED]\n\
+ tel.canvasbench-16333 [002] ..s1 87432.883990: softirq_exit: vec=7 [action=SCHED]\n\
+ tel.canvasbench-16333 [002] ..s1 87432.883993: softirq_entry: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [002] ..s1 87432.884009: softirq_exit: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [002] ...1 87432.885392: tracing_mark_write: B|16333|performTraversals\n\
+ tel.canvasbench-16333 [002] ...1 87432.885500: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [002] d..3 87432.887088: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=S ==> next_comm=WindowManager next_pid=7820 next_prio=116\n\
+ tel.canvasbench-16333 [002] d..3 87432.981777: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=S ==> next_comm=swapper/2 next_pid=0 next_prio=120\n\
+ tel.canvasbench-16333 [002] ...1 87432.986216: tracing_mark_write: B|16333|performTraversals\n\
+ tel.canvasbench-16333 [002] ...1 87432.986302: tracing_mark_write: B|16333|measure\n\
+ tel.canvasbench-16333 [002] ...1 87432.986559: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [002] ...1 87432.986609: tracing_mark_write: B|16333|layout\n\
+ tel.canvasbench-16333 [002] ...1 87432.986722: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [002] ...1 87432.986755: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [002] d..4 87432.988133: sched_wakeup: comm=Binder_2 pid=7805 prio=120 success=1 target_cpu=002\n\
+ tel.canvasbench-16333 [002] d..3 87432.988158: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R+ ==> next_comm=Binder_2 next_pid=7805 next_prio=120\n\
+ tel.canvasbench-16333 [002] d..4 87432.989847: sched_wakeup: comm=Binder_2 pid=7805 prio=120 success=1 target_cpu=002\n\
+ tel.canvasbench-16333 [002] d..3 87432.989860: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R+ ==> next_comm=Binder_2 next_pid=7805 next_prio=120\n\
+ tel.canvasbench-16333 [002] d.h2 87432.990826: sched_wakeup: comm=jbd2/mmcblk0p7- pid=1754 prio=120 success=1 target_cpu=002\n\
+ tel.canvasbench-16333 [002] d..3 87432.990860: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R ==> next_comm=jbd2/mmcblk0p7- next_pid=1754 next_prio=120\n\
+ tel.canvasbench-16333 [002] d..3 87432.991559: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=S ==> next_comm=swapper/2 next_pid=0 next_prio=120\n\
+ tel.canvasbench-16333 [003] ...1 87433.002316: tracing_mark_write: B|16333|performTraversals\n\
+ tel.canvasbench-16333 [003] ...1 87433.002402: tracing_mark_write: B|16333|draw\n\
+ tel.canvasbench-16333 [003] ...1 87433.002572: tracing_mark_write: B|16333|eglBeginFrame\n\
+ tel.canvasbench-16333 [003] ...1 87433.002593: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [003] ...1 87433.002635: tracing_mark_write: B|16333|getDisplayList\n\
+ tel.canvasbench-16333 [003] d..3 87433.003033: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R ==> next_comm=Compiler next_pid=7800 next_prio=120\n\
+ tel.canvasbench-16333 [003] d.h2 87433.013896: hrtimer_expire_entry: hrtimer=f67fef00 function=tick_sched_timer now=33618360026168\n\
+ tel.canvasbench-16333 [003] d.h2 87433.013919: softirq_raise: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] d.h2 87433.013924: softirq_raise: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [003] d.h2 87433.013942: softirq_raise: vec=7 [action=SCHED]\n\
+ tel.canvasbench-16333 [003] d.h2 87433.013946: hrtimer_expire_exit: hrtimer=f67fef00\n\
+ tel.canvasbench-16333 [003] d.h3 87433.013949: hrtimer_start: hrtimer=f67fef00 function=tick_sched_timer expires=33618370000000 softexpires=33618370000000\n\
+ tel.canvasbench-16333 [003] ..s1 87433.013958: softirq_entry: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] ..s1 87433.013961: softirq_exit: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] ..s1 87433.013964: softirq_entry: vec=7 [action=SCHED]\n\
+ tel.canvasbench-16333 [003] ..s1 87433.013994: softirq_exit: vec=7 [action=SCHED]\n\
+ tel.canvasbench-16333 [003] ..s1 87433.013997: softirq_entry: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [003] ..s1 87433.014004: softirq_exit: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [003] d..3 87433.018539: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R ==> next_comm=EventThread next_pid=7811 next_prio=111\n\
+ tel.canvasbench-16333 [003] d.h1 87433.023881: hrtimer_expire_entry: hrtimer=f67fef00 function=tick_sched_timer now=33618370012086\n\
+ tel.canvasbench-16333 [003] d.h1 87433.023905: softirq_raise: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] d.h1 87433.023913: softirq_raise: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [003] d.h1 87433.023940: hrtimer_expire_exit: hrtimer=f67fef00\n\
+ tel.canvasbench-16333 [003] d.h2 87433.023944: hrtimer_start: hrtimer=f67fef00 function=tick_sched_timer expires=33618380000000 softexpires=33618380000000\n\
+ tel.canvasbench-16333 [003] ..s1 87433.023953: softirq_entry: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] ..s1 87433.023957: softirq_exit: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] ..s1 87433.023960: softirq_entry: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [003] ..s1 87433.023967: softirq_exit: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [003] d.h1 87433.033880: hrtimer_expire_entry: hrtimer=f67fef00 function=tick_sched_timer now=33618380013017\n\
+ tel.canvasbench-16333 [003] d.h1 87433.033903: softirq_raise: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] d.h1 87433.033937: hrtimer_expire_exit: hrtimer=f67fef00\n\
+ tel.canvasbench-16333 [003] d.h2 87433.033940: hrtimer_start: hrtimer=f67fef00 function=tick_sched_timer expires=33618390000000 softexpires=33618390000000\n\
+ tel.canvasbench-16333 [003] ..s1 87433.033953: softirq_entry: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] ..s1 87433.033957: softirq_exit: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] d.h1 87433.043882: hrtimer_expire_entry: hrtimer=f67fef00 function=tick_sched_timer now=33618390012695\n\
+ tel.canvasbench-16333 [003] d.h1 87433.043908: softirq_raise: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] d.h1 87433.043939: hrtimer_expire_exit: hrtimer=f67fef00\n\
+ tel.canvasbench-16333 [003] d.h2 87433.043942: hrtimer_start: hrtimer=f67fef00 function=tick_sched_timer expires=33618400000000 softexpires=33618400000000\n\
+ tel.canvasbench-16333 [003] ..s1 87433.043954: softirq_entry: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] ..s1 87433.043958: softirq_exit: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] d..4 87433.050531: sched_wakeup: comm=logcat pid=8827 prio=120 success=1 target_cpu=002\n\
+ tel.canvasbench-16333 [003] d..4 87433.051029: sched_wakeup: comm=Compiler pid=16340 prio=120 success=1 target_cpu=002\n\
+ tel.canvasbench-16333 [003] ...1 87433.051148: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [003] ...1 87433.051198: tracing_mark_write: B|16333|prepareFrame\n\
+ tel.canvasbench-16333 [003] ...1 87433.051285: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [003] ...1 87433.051371: tracing_mark_write: B|16333|drawDisplayList\n\
+ tel.canvasbench-16333 [003] d..2 87433.053204: timer_start: timer=f87c644c function=ut_isnprintf expires=3331844 [timeout=5]\n\
+ tel.canvasbench-16333 [003] d..2 87433.053248: hrtimer_start: hrtimer=f87c5dc0 function=gburst_module_init expires=33618404387576 softexpires=33618404387576\n\
+ tel.canvasbench-16333 [003] d.h1 87433.053871: hrtimer_expire_entry: hrtimer=f67fef00 function=tick_sched_timer now=33618400008729\n\
+ tel.canvasbench-16333 [003] d.h1 87433.053892: softirq_raise: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] d.h1 87433.053897: softirq_raise: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [003] d.h1 87433.053922: hrtimer_expire_exit: hrtimer=f67fef00\n\
+ tel.canvasbench-16333 [003] d.h2 87433.053925: hrtimer_start: hrtimer=f67fef00 function=tick_sched_timer expires=33618410000000 softexpires=33618410000000\n\
+ tel.canvasbench-16333 [003] ..s1 87433.053936: softirq_entry: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] ..s1 87433.053941: softirq_exit: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] ..s1 87433.053943: softirq_entry: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [003] ..s1 87433.053950: softirq_exit: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [003] ...1 87433.059714: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [003] ...1 87433.059816: tracing_mark_write: B|16333|eglSwapBuffers\n\
+ tel.canvasbench-16333 [003] d..2 87433.060054: timer_start: timer=f87c644c function=ut_isnprintf expires=3331845 [timeout=5]\n\
+ tel.canvasbench-16333 [003] d..2 87433.060095: hrtimer_start: hrtimer=f87c5dc0 function=gburst_module_init expires=33618411234621 softexpires=33618411234621\n\
+ tel.canvasbench-16333 [003] ...1 87433.060138: tracing_mark_write: B|16333|setBuffersTransform\n\
+ tel.canvasbench-16333 [003] ...1 87433.060146: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [003] ...1 87433.060157: tracing_mark_write: B|16333|queueBuffer\n\
+ tel.canvasbench-16333 [003] d..4 87433.060254: sched_wakeup: comm=Binder_B pid=8137 prio=120 success=1 target_cpu=002\n\
+ tel.canvasbench-16333 [003] d..3 87433.060327: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=S ==> next_comm=swapper/3 next_pid=0 next_prio=120\n\
+ tel.canvasbench-16333 [002] d..3 87433.060667: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R ==> next_comm=HWC Vsync Event next_pid=7809 next_prio=112\n\
+ tel.canvasbench-16333 [002] ...1 87433.060738: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [002] ...1 87433.060772: tracing_mark_write: B|16333|query\n\
+ tel.canvasbench-16333 [002] ...1 87433.060783: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [002] ...1 87433.060798: tracing_mark_write: B|16333|query\n\
+ tel.canvasbench-16333 [002] ...1 87433.060808: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [002] ...1 87433.060822: tracing_mark_write: B|16333|query\n\
+ tel.canvasbench-16333 [002] ...1 87433.060831: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [002] ...1 87433.060848: tracing_mark_write: B|16333|setBuffersDimensions\n\
+ tel.canvasbench-16333 [002] ...1 87433.060857: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [002] ...1 87433.060875: tracing_mark_write: B|16333|dequeueBuffer\n\
+ tel.canvasbench-16333 [002] d..4 87433.060943: sched_wakeup: comm=Binder_C pid=9457 prio=120 success=1 target_cpu=002\n\
+ tel.canvasbench-16333 [002] d..3 87433.060962: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R+ ==> next_comm=Binder_C next_pid=9457 next_prio=120\n\
+ tel.canvasbench-16333 [002] d..4 87433.061000: sched_wakeup: comm=Binder_C pid=9457 prio=120 success=1 target_cpu=002\n\
+ tel.canvasbench-16333 [002] d..3 87433.061010: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R+ ==> next_comm=Binder_C next_pid=9457 next_prio=120\n\
+ tel.canvasbench-16333 [003] d..3 87433.064137: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=S ==> next_comm=swapper/3 next_pid=0 next_prio=120\n\
+ tel.canvasbench-16333 [002] d..4 87433.070998: sched_wakeup: comm=Binder_9 pid=8074 prio=120 success=1 target_cpu=002\n\
+ tel.canvasbench-16333 [002] d..3 87433.071013: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R+ ==> next_comm=Binder_9 next_pid=8074 next_prio=120\n\
+ tel.canvasbench-16333 [002] d..4 87433.071050: sched_wakeup: comm=Binder_9 pid=8074 prio=120 success=1 target_cpu=002\n\
+ tel.canvasbench-16333 [002] d..3 87433.071062: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R+ ==> next_comm=Binder_9 next_pid=8074 next_prio=120\n\
+ tel.canvasbench-16333 [002] ...1 87433.071275: tracing_mark_write: B|16333|registerBuffer\n\
+ tel.canvasbench-16333 [002] ...1 87433.072810: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [002] ...1 87433.072849: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [002] ...1 87433.072877: tracing_mark_write: B|16333|waitForever\n\
+ tel.canvasbench-16333 [002] ...1 87433.072885: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [002] d.h2 87433.073878: hrtimer_expire_entry: hrtimer=f67f1f00 function=tick_sched_timer now=33618420013908\n\
+ tel.canvasbench-16333 [002] d.h2 87433.073899: softirq_raise: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [002] d.h2 87433.073905: softirq_raise: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [002] d.h2 87433.073924: hrtimer_expire_exit: hrtimer=f67f1f00\n\
+ tel.canvasbench-16333 [002] d.h3 87433.073930: hrtimer_start: hrtimer=f67f1f00 function=tick_sched_timer expires=33618430000000 softexpires=33618430000000\n\
+ tel.canvasbench-16333 [002] ..s1 87433.073941: softirq_entry: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [002] ..s1 87433.073945: softirq_exit: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [002] ..s1 87433.073947: softirq_entry: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [002] ..s1 87433.073957: softirq_exit: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [002] d..2 87433.074084: timer_start: timer=f87c644c function=ut_isnprintf expires=3331847 [timeout=5]\n\
+ tel.canvasbench-16333 [002] d..2 87433.074123: hrtimer_start: hrtimer=f87c5dc0 function=gburst_module_init expires=33618425263167 softexpires=33618425263167\n\
+ tel.canvasbench-16333 [002] ...1 87433.074176: tracing_mark_write: B|16333|kicked off frame 367\n\
+ tel.canvasbench-16333 [002] d..4 87433.074215: sched_wakeup: comm=GPUFrameComplet pid=16347 prio=120 success=1 target_cpu=002\n\
+ tel.canvasbench-16333 [002] d..3 87433.074229: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R+ ==> next_comm=GPUFrameComplet next_pid=16347 next_prio=120\n\
+ tel.canvasbench-16333 [002] ...1 87433.074276: tracing_mark_write: C|16333|GPU Frames Outstanding|1\n\
+ tel.canvasbench-16333 [002] ...1 87433.074287: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [002] d..4 87433.074307: sched_wakeup: comm=GPUFrameComplet pid=16347 prio=120 success=1 target_cpu=002\n\
+ tel.canvasbench-16333 [002] d..3 87433.074320: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R+ ==> next_comm=GPUFrameComplet next_pid=16347 next_prio=120\n\
+ tel.canvasbench-16333 [002] ...1 87433.074621: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [002] ...1 87433.074668: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [002] ...1 87433.074684: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [002] d..3 87433.075669: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=S ==> next_comm=swapper/2 next_pid=0 next_prio=120\n\
+ tel.canvasbench-16333 [002] d..4 87433.383588: sched_wakeup: comm=Binder_1 pid=7804 prio=120 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [002] d..3 87433.383840: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R ==> next_comm=EventThread next_pid=7811 next_prio=111\n\
+ tel.canvasbench-16333 [002] d..3 87433.385307: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=S ==> next_comm=swapper/2 next_pid=0 next_prio=120\n\
+ tel.canvasbench-16333 [003] ...1 87433.422030: tracing_mark_write: B|16333|performTraversals\n\
+ tel.canvasbench-16333 [003] ...1 87433.422135: tracing_mark_write: B|16333|draw\n\
+ tel.canvasbench-16333 [003] ...1 87433.422321: tracing_mark_write: B|16333|eglBeginFrame\n\
+ tel.canvasbench-16333 [003] ...1 87433.422346: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [003] ...1 87433.422392: tracing_mark_write: B|16333|getDisplayList\n\
+ tel.canvasbench-16333 [003] d.h1 87433.423868: hrtimer_expire_entry: hrtimer=f67fef00 function=tick_sched_timer now=33618770014105\n\
+ tel.canvasbench-16333 [003] d.h1 87433.423895: softirq_raise: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] d.h1 87433.423904: softirq_raise: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [003] d.h1 87433.423934: hrtimer_expire_exit: hrtimer=f67fef00\n\
+ tel.canvasbench-16333 [003] d.h2 87433.423938: hrtimer_start: hrtimer=f67fef00 function=tick_sched_timer expires=33618780000000 softexpires=33618780000000\n\
+ tel.canvasbench-16333 [003] ..s1 87433.423948: softirq_entry: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] ..s1 87433.423955: timer_expire_entry: timer=e2b69dc0 function=process_timeout now=3331877\n\
+ tel.canvasbench-16333 [003] d.s3 87433.423990: sched_wakeup: comm=HWC Vsync Event pid=7809 prio=112 success=1 target_cpu=002\n\
+ tel.canvasbench-16333 [003] ..s1 87433.423999: timer_expire_exit: timer=e2b69dc0\n\
+ tel.canvasbench-16333 [003] ..s1 87433.424003: softirq_exit: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] ..s1 87433.424007: softirq_entry: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [003] ..s1 87433.424014: softirq_exit: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [003] d.h1 87433.433873: hrtimer_expire_entry: hrtimer=f67fef00 function=tick_sched_timer now=33618780018712\n\
+ tel.canvasbench-16333 [003] d.h1 87433.433897: softirq_raise: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] d.h1 87433.433932: hrtimer_expire_exit: hrtimer=f67fef00\n\
+ tel.canvasbench-16333 [003] d.h2 87433.433936: hrtimer_start: hrtimer=f67fef00 function=tick_sched_timer expires=33618790000000 softexpires=33618790000000\n\
+ tel.canvasbench-16333 [003] ..s1 87433.433947: softirq_entry: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] ..s1 87433.433952: softirq_exit: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] d.h1 87433.443860: hrtimer_expire_entry: hrtimer=f67fef00 function=tick_sched_timer now=33618790010568\n\
+ tel.canvasbench-16333 [003] d.h1 87433.443884: softirq_raise: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] d.h1 87433.443913: hrtimer_expire_exit: hrtimer=f67fef00\n\
+ tel.canvasbench-16333 [003] d.h2 87433.443918: hrtimer_start: hrtimer=f67fef00 function=tick_sched_timer expires=33618800000000 softexpires=33618800000000\n\
+ tel.canvasbench-16333 [003] ..s1 87433.443934: softirq_entry: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] ..s1 87433.443940: softirq_exit: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] d.h1 87433.453880: hrtimer_expire_entry: hrtimer=f67fef00 function=tick_sched_timer now=33618800024200\n\
+ tel.canvasbench-16333 [003] d.h1 87433.453907: softirq_raise: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] d.h1 87433.453913: softirq_raise: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [003] d.h1 87433.453940: hrtimer_expire_exit: hrtimer=f67fef00\n\
+ tel.canvasbench-16333 [003] d.h2 87433.453944: hrtimer_start: hrtimer=f67fef00 function=tick_sched_timer expires=33618810000000 softexpires=33618810000000\n\
+ tel.canvasbench-16333 [003] ..s1 87433.453955: softirq_entry: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] ..s1 87433.453961: softirq_exit: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] ..s1 87433.453965: softirq_entry: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [003] ..s1 87433.453976: softirq_exit: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [003] d.h1 87433.463878: hrtimer_expire_entry: hrtimer=f67fef00 function=tick_sched_timer now=33618810024661\n\
+ tel.canvasbench-16333 [003] d.h1 87433.463905: softirq_raise: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] d.h1 87433.463911: softirq_raise: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [003] d.h1 87433.463934: hrtimer_expire_exit: hrtimer=f67fef00\n\
+ tel.canvasbench-16333 [003] d.h2 87433.463938: hrtimer_start: hrtimer=f67fef00 function=tick_sched_timer expires=33618820000000 softexpires=33618820000000\n\
+ tel.canvasbench-16333 [003] ..s1 87433.463953: softirq_entry: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] ..s1 87433.463959: softirq_exit: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] ..s1 87433.463963: softirq_entry: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [003] ..s1 87433.463972: softirq_exit: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [003] d.h1 87433.473864: hrtimer_expire_entry: hrtimer=f67fef00 function=tick_sched_timer now=33618820014204\n\
+ tel.canvasbench-16333 [003] d.h1 87433.473889: softirq_raise: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] d.h1 87433.473917: hrtimer_expire_exit: hrtimer=f67fef00\n\
+ tel.canvasbench-16333 [003] d.h2 87433.473921: hrtimer_start: hrtimer=f67fef00 function=tick_sched_timer expires=33618830000000 softexpires=33618830000000\n\
+ tel.canvasbench-16333 [003] ..s1 87433.473936: softirq_entry: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] ..s1 87433.473941: softirq_exit: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] d.h1 87433.483883: hrtimer_expire_entry: hrtimer=f67fef00 function=tick_sched_timer now=33618830028317\n\
+ tel.canvasbench-16333 [003] d.h1 87433.483913: softirq_raise: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] d.h1 87433.483920: softirq_raise: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [003] d.h1 87433.483939: hrtimer_expire_exit: hrtimer=f67fef00\n\
+ tel.canvasbench-16333 [003] d.h2 87433.483943: hrtimer_start: hrtimer=f67fef00 function=tick_sched_timer expires=33618840000000 softexpires=33618840000000\n\
+ tel.canvasbench-16333 [003] ..s1 87433.483956: softirq_entry: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] ..s1 87433.483964: timer_expire_entry: timer=f6800920 function=cpufreq_interactive_timer now=3331883\n\
+ tel.canvasbench-16333 [003] d.s3 87433.483998: sched_wakeup: comm=cfinteractive pid=586 prio=0 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [003] d.s2 87433.484010: timer_start: timer=f6800920 function=cpufreq_interactive_timer expires=3331893 [timeout=10]\n\
+ tel.canvasbench-16333 [003] ..s1 87433.484014: timer_expire_exit: timer=f6800920\n\
+ tel.canvasbench-16333 [003] ..s1 87433.484018: softirq_exit: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] ..s1 87433.484021: softirq_entry: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [003] ..s1 87433.484030: softirq_exit: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [003] d..3 87433.484053: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R ==> next_comm=cfinteractive next_pid=586 next_prio=0\n\
+ tel.canvasbench-16333 [003] d..4 87433.488461: sched_wakeup: comm=logcat pid=8827 prio=120 success=1 target_cpu=002\n\
+ tel.canvasbench-16333 [003] ...1 87433.488714: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [003] ...1 87433.488755: tracing_mark_write: B|16333|prepareFrame\n\
+ tel.canvasbench-16333 [003] ...1 87433.488810: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [003] ...1 87433.488847: tracing_mark_write: B|16333|drawDisplayList\n\
+ tel.canvasbench-16333 [003] d..2 87433.490351: timer_start: timer=f87c644c function=ut_isnprintf expires=3331888 [timeout=5]\n\
+ tel.canvasbench-16333 [003] d..2 87433.490393: hrtimer_start: hrtimer=f87c5dc0 function=gburst_module_init expires=33618841550112 softexpires=33618841550112\n\
+ tel.canvasbench-16333 [003] d.h1 87433.493855: hrtimer_expire_entry: hrtimer=f67fef00 function=tick_sched_timer now=33618840010889\n\
+ tel.canvasbench-16333 [003] d.h1 87433.493877: softirq_raise: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] d.h1 87433.493884: softirq_raise: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [003] d.h1 87433.493904: hrtimer_expire_exit: hrtimer=f67fef00\n\
+ tel.canvasbench-16333 [003] d.h2 87433.493907: hrtimer_start: hrtimer=f67fef00 function=tick_sched_timer expires=33618850000000 softexpires=33618850000000\n\
+ tel.canvasbench-16333 [003] ..s1 87433.493918: softirq_entry: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] ..s1 87433.493923: softirq_exit: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [003] ..s1 87433.493925: softirq_entry: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [003] ..s1 87433.493933: softirq_exit: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [003] ...1 87433.495952: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [003] ...1 87433.496054: tracing_mark_write: B|16333|eglSwapBuffers\n\
+ tel.canvasbench-16333 [003] d..2 87433.496284: timer_start: timer=f87c644c function=ut_isnprintf expires=3331889 [timeout=5]\n\
+ tel.canvasbench-16333 [003] d..2 87433.496323: hrtimer_start: hrtimer=f87c5dc0 function=gburst_module_init expires=33618847480340 softexpires=33618847480340\n\
+ tel.canvasbench-16333 [003] ...1 87433.496369: tracing_mark_write: B|16333|setBuffersTransform\n\
+ tel.canvasbench-16333 [003] ...1 87433.496378: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [003] ...1 87433.496390: tracing_mark_write: B|16333|queueBuffer\n\
+ tel.canvasbench-16333 [003] d..4 87433.496492: sched_wakeup: comm=Binder_E pid=16812 prio=120 success=1 target_cpu=002\n\
+ tel.canvasbench-16333 [003] d..3 87433.496566: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=S ==> next_comm=swapper/3 next_pid=0 next_prio=120\n\
+ tel.canvasbench-16333 [002] d..3 87433.496919: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R+ ==> next_comm=HWC Vsync Event next_pid=7809 next_prio=112\n\
+ tel.canvasbench-16333 [002] ...1 87433.496973: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [002] ...1 87433.497009: tracing_mark_write: B|16333|query\n\
+ tel.canvasbench-16333 [002] ...1 87433.497021: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [002] ...1 87433.497036: tracing_mark_write: B|16333|query\n\
+ tel.canvasbench-16333 [002] ...1 87433.497046: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [002] ...1 87433.497059: tracing_mark_write: B|16333|query\n\
+ tel.canvasbench-16333 [002] ...1 87433.497067: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [002] ...1 87433.497083: tracing_mark_write: B|16333|setBuffersDimensions\n\
+ tel.canvasbench-16333 [002] ...1 87433.497093: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [002] ...1 87433.497110: tracing_mark_write: B|16333|dequeueBuffer\n\
+ tel.canvasbench-16333 [002] d..4 87433.497188: sched_wakeup: comm=Binder_3 pid=7960 prio=120 success=1 target_cpu=002\n\
+ tel.canvasbench-16333 [002] d..3 87433.497209: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R+ ==> next_comm=Binder_3 next_pid=7960 next_prio=120\n\
+ tel.canvasbench-16333 [002] d..4 87433.497251: sched_wakeup: comm=Binder_3 pid=7960 prio=120 success=1 target_cpu=002\n\
+ tel.canvasbench-16333 [002] d..3 87433.497260: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R+ ==> next_comm=Binder_3 next_pid=7960 next_prio=120\n\
+ tel.canvasbench-16333 [002] ...1 87433.497469: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [002] ...1 87433.497487: tracing_mark_write: B|16333|waitForever\n\
+ tel.canvasbench-16333 [002] ...1 87433.497493: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [002] ...1 87433.498030: tracing_mark_write: B|16333|kicked off frame 368\n\
+ tel.canvasbench-16333 [002] d..4 87433.498067: sched_wakeup: comm=GPUFrameComplet pid=16347 prio=120 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [002] ...1 87433.498086: tracing_mark_write: C|16333|GPU Frames Outstanding|1\n\
+ tel.canvasbench-16333 [002] ...1 87433.498095: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [002] ...1 87433.498105: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [002] ...1 87433.498189: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [002] ...1 87433.498206: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [002] d..3 87433.499417: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=S ==> next_comm=swapper/2 next_pid=0 next_prio=120\n\
+ tel.canvasbench-16333 [002] d.h1 87433.883839: hrtimer_expire_entry: hrtimer=f67f1f00 function=tick_sched_timer now=33619230009352\n\
+ tel.canvasbench-16333 [002] d.h1 87433.883860: softirq_raise: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [002] d.h1 87433.883867: softirq_raise: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [002] d.h1 87433.883880: softirq_raise: vec=7 [action=SCHED]\n\
+ tel.canvasbench-16333 [002] d.h1 87433.883891: hrtimer_expire_exit: hrtimer=f67f1f00\n\
+ tel.canvasbench-16333 [002] d.h2 87433.883894: hrtimer_start: hrtimer=f67f1f00 function=tick_sched_timer expires=33619240000000 softexpires=33619240000000\n\
+ tel.canvasbench-16333 [002] ..s1 87433.883904: softirq_entry: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [002] ..s1 87433.883910: timer_expire_entry: timer=f67f3920 function=cpufreq_interactive_timer now=3331923\n\
+ tel.canvasbench-16333 [002] d.s2 87433.883924: timer_start: timer=f67f3920 function=cpufreq_interactive_timer expires=3331933 [timeout=10]\n\
+ tel.canvasbench-16333 [002] ..s1 87433.883929: timer_expire_exit: timer=f67f3920\n\
+ tel.canvasbench-16333 [002] ..s1 87433.883932: timer_expire_entry: timer=f67f36f0 function=delayed_work_timer_fn now=3331923\n\
+ tel.canvasbench-16333 [002] d.s4 87433.883951: sched_wakeup: comm=kworker/2:1 pid=12461 prio=120 success=1 target_cpu=002\n\
+ tel.canvasbench-16333 [002] ..s1 87433.883959: timer_expire_exit: timer=f67f36f0\n\
+ tel.canvasbench-16333 [002] ..s1 87433.883964: softirq_exit: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [002] ..s1 87433.883966: softirq_entry: vec=7 [action=SCHED]\n\
+ tel.canvasbench-16333 [002] ..s1 87433.883973: softirq_exit: vec=7 [action=SCHED]\n\
+ tel.canvasbench-16333 [002] ..s1 87433.883976: softirq_entry: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [002] ..s1 87433.883982: softirq_exit: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [002] d..3 87433.883998: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R ==> next_comm=kworker/2:1 next_pid=12461 next_prio=120\n\
+ tel.canvasbench-16333 [002] d..4 87433.884164: sched_wakeup: comm=Binder_8 pid=8073 prio=120 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [002] d..3 87433.885688: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=S ==> next_comm=swapper/2 next_pid=0 next_prio=120\n\
+ tel.canvasbench-16333 [002] ...1 87433.925355: tracing_mark_write: B|16333|performTraversals\n\
+ tel.canvasbench-16333 [002] ...1 87433.925457: tracing_mark_write: B|16333|draw\n\
+ tel.canvasbench-16333 [002] ...1 87433.925653: tracing_mark_write: B|16333|eglBeginFrame\n\
+ tel.canvasbench-16333 [002] ...1 87433.925678: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [002] ...1 87433.925724: tracing_mark_write: B|16333|getDisplayList\n\
+ tel.canvasbench-16333 [002] d.h1 87433.933853: hrtimer_expire_entry: hrtimer=f67f1f00 function=tick_sched_timer now=33619280018707\n\
+ tel.canvasbench-16333 [002] d.h1 87433.933885: softirq_raise: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [002] d.h1 87433.933913: softirq_raise: vec=7 [action=SCHED]\n\
+ tel.canvasbench-16333 [002] d.h1 87433.933921: hrtimer_expire_exit: hrtimer=f67f1f00\n\
+ tel.canvasbench-16333 [002] d.h2 87433.933925: hrtimer_start: hrtimer=f67f1f00 function=tick_sched_timer expires=33619290000000 softexpires=33619290000000\n\
+ tel.canvasbench-16333 [002] ..s1 87433.933941: softirq_entry: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [002] ..s1 87433.933949: timer_expire_entry: timer=e2b69dc0 function=process_timeout now=3331928\n\
+ tel.canvasbench-16333 [002] d.s3 87433.933977: sched_wakeup: comm=HWC Vsync Event pid=7809 prio=112 success=1 target_cpu=002\n\
+ tel.canvasbench-16333 [002] ..s1 87433.933988: timer_expire_exit: timer=e2b69dc0\n\
+ tel.canvasbench-16333 [002] ..s1 87433.933992: softirq_exit: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [002] ..s1 87433.933996: softirq_entry: vec=7 [action=SCHED]\n\
+ tel.canvasbench-16333 [002] ..s1 87433.934003: softirq_exit: vec=7 [action=SCHED]\n\
+ tel.canvasbench-16333 [002] d..3 87433.934026: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R ==> next_comm=HWC Vsync Event next_pid=7809 next_prio=112\n\
+ tel.canvasbench-16333 [002] d.h1 87433.943850: hrtimer_expire_entry: hrtimer=f67f1f00 function=tick_sched_timer now=33619290015993\n\
+ tel.canvasbench-16333 [002] d.h1 87433.943873: softirq_raise: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [002] d.h1 87433.943895: hrtimer_expire_exit: hrtimer=f67f1f00\n\
+ tel.canvasbench-16333 [002] d.h2 87433.943898: hrtimer_start: hrtimer=f67f1f00 function=tick_sched_timer expires=33619300000000 softexpires=33619300000000\n\
+ tel.canvasbench-16333 [002] d.h1 87433.943906: hrtimer_expire_entry: hrtimer=f0cc9ecc function=hrtimer_wakeup now=33619290015993\n\
+ tel.canvasbench-16333 [002] d.h3 87433.943940: sched_wakeup: comm=ndroid.settings pid=14022 prio=120 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [002] d.h1 87433.943948: hrtimer_expire_exit: hrtimer=f0cc9ecc\n\
+ tel.canvasbench-16333 [002] ..s1 87433.943960: softirq_entry: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [002] ..s1 87433.943965: softirq_exit: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [002] d.h1 87433.953864: hrtimer_expire_entry: hrtimer=f67f1f00 function=tick_sched_timer now=33619300025878\n\
+ tel.canvasbench-16333 [002] d.h1 87433.953892: softirq_raise: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [002] d.h1 87433.953898: softirq_raise: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [002] d.h1 87433.953927: hrtimer_expire_exit: hrtimer=f67f1f00\n\
+ tel.canvasbench-16333 [002] d.h2 87433.953931: hrtimer_start: hrtimer=f67f1f00 function=tick_sched_timer expires=33619310000000 softexpires=33619310000000\n\
+ tel.canvasbench-16333 [002] ..s1 87433.953941: softirq_entry: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [002] ..s1 87433.953946: softirq_exit: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [002] ..s1 87433.953950: softirq_entry: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [002] ..s1 87433.953960: softirq_exit: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [002] d.h1 87433.963855: hrtimer_expire_entry: hrtimer=f67f1f00 function=tick_sched_timer now=33619310025828\n\
+ tel.canvasbench-16333 [002] d.h1 87433.963879: softirq_raise: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [002] d.h1 87433.963887: softirq_raise: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [002] d.h1 87433.963910: hrtimer_expire_exit: hrtimer=f67f1f00\n\
+ tel.canvasbench-16333 [002] d.h2 87433.963916: hrtimer_start: hrtimer=f67f1f00 function=tick_sched_timer expires=33619320000000 softexpires=33619320000000\n\
+ tel.canvasbench-16333 [002] ..s1 87433.963932: softirq_entry: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [002] ..s1 87433.963939: softirq_exit: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [002] ..s1 87433.963942: softirq_entry: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [002] ..s1 87433.963954: softirq_exit: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [002] d.h1 87433.973861: hrtimer_expire_entry: hrtimer=f67f1f00 function=tick_sched_timer now=33619320027791\n\
+ tel.canvasbench-16333 [002] d.h1 87433.973889: softirq_raise: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [002] d.h1 87433.973920: hrtimer_expire_exit: hrtimer=f67f1f00\n\
+ tel.canvasbench-16333 [002] d.h2 87433.973924: hrtimer_start: hrtimer=f67f1f00 function=tick_sched_timer expires=33619330000000 softexpires=33619330000000\n\
+ tel.canvasbench-16333 [002] ..s1 87433.973935: softirq_entry: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [002] ..s1 87433.973940: softirq_exit: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [002] d.h1 87433.983862: hrtimer_expire_entry: hrtimer=f67f1f00 function=tick_sched_timer now=33619330027050\n\
+ tel.canvasbench-16333 [002] d.h1 87433.983889: softirq_raise: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [002] d.h1 87433.983896: softirq_raise: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [002] d.h1 87433.983920: hrtimer_expire_exit: hrtimer=f67f1f00\n\
+ tel.canvasbench-16333 [002] d.h2 87433.983924: hrtimer_start: hrtimer=f67f1f00 function=tick_sched_timer expires=33619340000000 softexpires=33619340000000\n\
+ tel.canvasbench-16333 [002] ..s1 87433.983938: softirq_entry: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [002] ..s1 87433.983946: timer_expire_entry: timer=f67f3920 function=cpufreq_interactive_timer now=3331933\n\
+ tel.canvasbench-16333 [002] d.s3 87433.983981: sched_wakeup: comm=cfinteractive pid=586 prio=0 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [002] d.s2 87433.983997: timer_start: timer=f67f3920 function=cpufreq_interactive_timer expires=3331943 [timeout=10]\n\
+ tel.canvasbench-16333 [002] ..s1 87433.984002: timer_expire_exit: timer=f67f3920\n\
+ tel.canvasbench-16333 [002] ..s1 87433.984006: softirq_exit: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [002] ..s1 87433.984010: softirq_entry: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [002] ..s1 87433.984018: softirq_exit: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [002] d..4 87433.992877: sched_wakeup: comm=logcat pid=8827 prio=120 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [002] ...1 87433.993111: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [002] ...1 87433.993148: tracing_mark_write: B|16333|prepareFrame\n\
+ tel.canvasbench-16333 [002] ...1 87433.993201: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [002] ...1 87433.993236: tracing_mark_write: B|16333|drawDisplayList\n\
+ tel.canvasbench-16333 [002] d.h1 87433.993840: hrtimer_expire_entry: hrtimer=f67f1f00 function=tick_sched_timer now=33619340012667\n\
+ tel.canvasbench-16333 [002] d.h1 87433.993860: softirq_raise: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [002] d.h1 87433.993866: softirq_raise: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [002] d.h1 87433.993885: hrtimer_expire_exit: hrtimer=f67f1f00\n\
+ tel.canvasbench-16333 [002] d.h2 87433.993887: hrtimer_start: hrtimer=f67f1f00 function=tick_sched_timer expires=33619350000000 softexpires=33619350000000\n\
+ tel.canvasbench-16333 [002] ..s1 87433.993895: softirq_entry: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [002] ..s1 87433.993900: softirq_exit: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [002] ..s1 87433.993903: softirq_entry: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [002] ..s1 87433.993914: softirq_exit: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [002] d..2 87433.994707: timer_start: timer=f87c644c function=ut_isnprintf expires=3331939 [timeout=5]\n\
+ tel.canvasbench-16333 [002] d..2 87433.994749: hrtimer_start: hrtimer=f87c5dc0 function=gburst_module_init expires=33619345926789 softexpires=33619345926789\n\
+ tel.canvasbench-16333 [002] d..2 87434.003149: timer_start: timer=f87c644c function=ut_isnprintf expires=3331939 [timeout=5]\n\
+ tel.canvasbench-16333 [002] d..2 87434.003193: hrtimer_start: hrtimer=f87c5dc0 function=gburst_module_init expires=33619354370149 softexpires=33619354370149\n\
+ tel.canvasbench-16333 [002] d.h3 87434.003836: hrtimer_expire_entry: hrtimer=f67f1f00 function=tick_sched_timer now=33619350011275\n\
+ tel.canvasbench-16333 [002] d.h3 87434.003856: softirq_raise: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [002] d.h3 87434.003863: softirq_raise: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [002] d.h3 87434.003881: hrtimer_expire_exit: hrtimer=f67f1f00\n\
+ tel.canvasbench-16333 [002] d.h4 87434.003884: hrtimer_start: hrtimer=f67f1f00 function=tick_sched_timer expires=33619360000000 softexpires=33619360000000\n\
+ tel.canvasbench-16333 [002] ..s1 87434.003895: softirq_entry: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [002] ..s1 87434.003899: softirq_exit: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [002] ..s1 87434.003902: softirq_entry: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [002] ..s1 87434.003910: softirq_exit: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [002] ...1 87434.007254: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [002] ...1 87434.007345: tracing_mark_write: B|16333|eglSwapBuffers\n\
+ tel.canvasbench-16333 [002] d..2 87434.007576: timer_start: timer=f87c644c function=ut_isnprintf expires=3331940 [timeout=5]\n\
+ tel.canvasbench-16333 [002] d..2 87434.007615: hrtimer_start: hrtimer=f87c5dc0 function=gburst_module_init expires=33619358792725 softexpires=33619358792725\n\
+ tel.canvasbench-16333 [002] ...1 87434.007655: tracing_mark_write: B|16333|setBuffersTransform\n\
+ tel.canvasbench-16333 [002] ...1 87434.007663: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [002] ...1 87434.007675: tracing_mark_write: B|16333|queueBuffer\n\
+ tel.canvasbench-16333 [002] d..4 87434.007770: sched_wakeup: comm=Binder_6 pid=7996 prio=120 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [002] d..3 87434.007849: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=S ==> next_comm=swapper/2 next_pid=0 next_prio=120\n\
+ tel.canvasbench-16333 [003] ...1 87434.008198: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [003] ...1 87434.008231: tracing_mark_write: B|16333|query\n\
+ tel.canvasbench-16333 [003] ...1 87434.008241: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [003] ...1 87434.008256: tracing_mark_write: B|16333|query\n\
+ tel.canvasbench-16333 [003] ...1 87434.008265: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [003] ...1 87434.008279: tracing_mark_write: B|16333|query\n\
+ tel.canvasbench-16333 [003] ...1 87434.008288: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [003] ...1 87434.008305: tracing_mark_write: B|16333|setBuffersDimensions\n\
+ tel.canvasbench-16333 [003] ...1 87434.008313: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [003] ...1 87434.008329: tracing_mark_write: B|16333|dequeueBuffer\n\
+ tel.canvasbench-16333 [003] d..4 87434.008410: sched_wakeup: comm=Binder_4 pid=7990 prio=120 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [003] d..3 87434.008428: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R+ ==> next_comm=Binder_4 next_pid=7990 next_prio=120\n\
+ tel.canvasbench-16333 [003] d..4 87434.008474: sched_wakeup: comm=Binder_4 pid=7990 prio=120 success=1 target_cpu=003\n\
+ tel.canvasbench-16333 [003] d..3 87434.008486: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=R+ ==> next_comm=Binder_4 next_pid=7990 next_prio=120\n\
+ tel.canvasbench-16333 [003] ...1 87434.008703: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [003] ...1 87434.008723: tracing_mark_write: B|16333|waitForever\n\
+ tel.canvasbench-16333 [003] ...1 87434.008728: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [003] ...1 87434.009159: tracing_mark_write: B|16333|kicked off frame 369\n\
+ tel.canvasbench-16333 [003] d..4 87434.009205: sched_wakeup: comm=GPUFrameComplet pid=16347 prio=120 success=1 target_cpu=002\n\
+ tel.canvasbench-16333 [003] ...1 87434.009228: tracing_mark_write: C|16333|GPU Frames Outstanding|1\n\
+ tel.canvasbench-16333 [003] ...1 87434.009237: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [003] ...1 87434.009251: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [003] ...1 87434.009318: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [003] ...1 87434.009333: tracing_mark_write: E\n\
+ tel.canvasbench-16333 [003] d..3 87434.010487: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=S ==> next_comm=swapper/3 next_pid=0 next_prio=120\n\
+ tel.canvasbench-16333 [002] d.h1 87434.383821: hrtimer_expire_entry: hrtimer=f67f1f00 function=tick_sched_timer now=33619730011160\n\
+ tel.canvasbench-16333 [002] d.h1 87434.383837: softirq_raise: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [002] d.h1 87434.383843: softirq_raise: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [002] d.h1 87434.383856: softirq_raise: vec=7 [action=SCHED]\n\
+ tel.canvasbench-16333 [002] d.h1 87434.383863: hrtimer_expire_exit: hrtimer=f67f1f00\n\
+ tel.canvasbench-16333 [002] d.h2 87434.383866: hrtimer_start: hrtimer=f67f1f00 function=tick_sched_timer expires=33619740000000 softexpires=33619740000000\n\
+ tel.canvasbench-16333 [002] ..s1 87434.383877: softirq_entry: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [002] ..s1 87434.383883: softirq_exit: vec=1 [action=TIMER]\n\
+ tel.canvasbench-16333 [002] ..s1 87434.383886: softirq_entry: vec=7 [action=SCHED]\n\
+ tel.canvasbench-16333 [002] ..s1 87434.383896: softirq_exit: vec=7 [action=SCHED]\n\
+ tel.canvasbench-16333 [002] ..s1 87434.383899: softirq_entry: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [002] ..s1 87434.383908: softirq_exit: vec=9 [action=RCU]\n\
+ tel.canvasbench-16333 [002] d..3 87434.385731: sched_switch: prev_comm=tel.canvasbench prev_pid=16333 prev_prio=120 prev_state=S ==> next_comm=swapper/2 next_pid=0 next_prio=120\n\

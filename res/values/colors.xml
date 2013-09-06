@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="testMgrBgColor">#000</color>
+    <color name="testDesBgColor">#FF00FF</color>
+    <color name="testResultBgColor">#00FF00</color>
+
+</resources>
